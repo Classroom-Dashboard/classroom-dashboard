@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
   before_action :find_student, only: [:show, :update, :destroy]
 
   def index
-    @students = Student.all.order("name ASC")
+    @students = Student.all.order("lastname ASC")
   end
 
   def new
@@ -30,7 +30,7 @@ class StudentsController < ApplicationController
   private
 
     def student_params
-      params.require(:student).permit(:name, :info)
+      params.require(:student).permit(:firstName, :lastname, :pronouns, :info)
     end
 
     def find_student
