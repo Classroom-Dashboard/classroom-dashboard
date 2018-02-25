@@ -1,5 +1,7 @@
 <% @students.each do |student| %>
-  <h2><%= student.name %> </h2>
+  <h2><%= student.firstName %> </h2>
 <% end %>
 
 <%= link_to "Add Student", new_student_path%>
+
+<%= link_to "Random Student!", randomize_path%>
