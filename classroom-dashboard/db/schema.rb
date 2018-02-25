@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223182736) do
+ActiveRecord::Schema.define(version: 20180225053216) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.string "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "lastname"
+    t.string "pronouns"
   end
 
 end
