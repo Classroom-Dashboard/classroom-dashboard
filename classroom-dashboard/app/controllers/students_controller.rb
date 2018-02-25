@@ -1,10 +1,20 @@
 class StudentsController < ApplicationController
+  before_action :find_student, only: [:show, :update, :destroy]
+
   def index
     @students = Student.all.order("name ASC")
   end
 
   def new
     @student = Student.new
+  end
+
+  def show
+  end
+
+  # see app/models/concerns/randomable.rb
+  def randomize
+    @student = Student.random
   end
 
   def create
@@ -21,6 +31,10 @@ class StudentsController < ApplicationController
 
     def student_params
       params.require(:student).permit(:name, :info)
+    end
+
+    def find_student
+      @student = Student.find(params[:id])
     end
 
 end
