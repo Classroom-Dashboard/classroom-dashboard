@@ -12,10 +12,18 @@ class StudentsController < ApplicationController
   def show
   end
 
+  
+  #  creates a list of students added
+  def student_list
+    @students = Student.all.order("lastname ASC")
+  end
+
 # when /randomize page loads, a random student is loaded into @student
   def randomize
     @student = Student.order("RANDOM()").limit(1)[0]
   end
+
+  
 
   # saves new student and reloads index page
   def create
@@ -31,7 +39,7 @@ class StudentsController < ApplicationController
   private
 
     def student_params
-      params.require(:student).permit(:firstName, :lastname, :pronouns, :info)
+      params.require(:student).permit(:student_img, :firstName, :lastname, :pronouns, :info)
     end
 
     def find_student
