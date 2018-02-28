@@ -1,0 +1,22 @@
+<!-- Content that is displayed when a Section is clicked on -->
+
+<!-- Display section information -->
+<%= @section.course %>
+<%= @section.semester %>
+<%= @section.year %>
+<%= @section.professor %>
+
+
+<!-- Ability to add a student to a section -->
+<%= link_to "Add Student", new_student_path%>
+
+<!-- Display a random student -->
+<%= link_to "Random Student!", randomize_path%>
+
+<!-- List all of the students in this section -->
+<%= link_to "Student List", student_list_path%>
+
+
+<!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
+<%= link_to "Edit", edit_section_path(@section)%>
+<%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
