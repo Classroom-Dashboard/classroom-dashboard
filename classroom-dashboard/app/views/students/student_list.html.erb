@@ -1,0 +1,13 @@
+<h2> Student List </h2>
+
+<div class="row">
+  <% @students.each do |student| %>
+    <div class="col-md-3">
+      <a href="/students/<%= student.id %>">
+        <%= image_tag student.student_img.url(:student_index) %>
+        <h2><%= student.firstName %> </h2>
+      </a>
+    </div>
+  <% end %>
+</div>
+
