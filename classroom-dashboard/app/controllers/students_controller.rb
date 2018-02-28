@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
   before_action :find_student, only: [:show, :update, :destroy]
 
   def index
-    @students = Student.all.order("lastname ASC")
+    @students = Student.all.order("lastName ASC")
   end
 
   def new
@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
   
   #  creates a list of students added
   def student_list
-    @students = Student.all.order("lastname ASC")
+    @students = Student.all.order("lastName ASC")
   end
 
 # when /randomize page loads, a random student is loaded into @student
