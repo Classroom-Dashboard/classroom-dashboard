@@ -1,9 +1,0 @@
-<%= image_tag @student.student_img.url(:student_index) %>
-<h2> <%= @student.firstName %> <%= @student.lastname %> </h2>
-
-<!-- reloads this page to load new random student -->
-<!-- <a href="<%= @section.id %>/randomize">reload </a> -->
-<!-- TODO: get reload link to work ^ -->
-
-<%= link_to "Random Student!", randomize_path %>
-<!-- ^ sometimes loads twice... possibly a chrome thing?? -->
