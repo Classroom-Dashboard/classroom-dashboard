@@ -2,7 +2,7 @@
 <!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
 
 <!-- Display section information -->
-<div style="text-align:center"> 
+<div style="text-align:center">
     <%= @section.course %>
     <%= @section.semester %>
     <%= @section.year %>
@@ -11,8 +11,8 @@
 
 
 <!-- Ability to add a student to a section -->
-<div style="text-align:center"> 
-    <p> <%= link_to "Add Student", new_student_path%> </p>
+<div style="text-align:center">
+    <p> <%= link_to "Add Student", new_section_student_path(@section)%> </p>
 
     <!-- Display a random student -->
     <p><%= link_to "Random Student!", randomize_path%> </p>
@@ -28,4 +28,3 @@
 <%= render @section.students.order("lastname ASC") %>
 <!-- loads in students by last name alphabetically -->
 <!-- refers to students/_student.html.erb for template  -->
-
