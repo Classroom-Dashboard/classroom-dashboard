@@ -1,5 +1,9 @@
+<!-- individual student's page -->
 <%= image_tag @student.student_img.url(:student_index) %>
 <%= @student.firstName %>
 <%= @student.lastname %>
 <%= @student.pronouns %>
 <%= @student.info %>
+
+<%= link_to "Edit Student", edit_section_student_path %>
+<%= link_to "Delete Student", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%>

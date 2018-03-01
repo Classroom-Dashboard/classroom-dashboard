@@ -1,4 +1,5 @@
 <!-- Content that is displayed when a Section is clicked on -->
+<!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
 
 <!-- Display section information -->
 <div style="text-align:center"> 
@@ -24,3 +25,7 @@
     <p><%= link_to "Edit", edit_section_path(@section)%></p>
     <p><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
 </div></p>
+<%= render @section.students.order("lastname ASC") %>
+<!-- loads in students by last name alphabetically -->
+<!-- refers to students/_student.html.erb for template  -->
+

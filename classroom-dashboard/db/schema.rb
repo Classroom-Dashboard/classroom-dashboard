@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228043301) do
+ActiveRecord::Schema.define(version: 20180301034025) do
 
   create_table "sections", force: :cascade do |t|
     t.string "course"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20180228043301) do
     t.string "student_img_content_type"
     t.integer "student_img_file_size"
     t.datetime "student_img_updated_at"
+    t.integer "course_id"
+    t.integer "section_id"
   end
 
 end
