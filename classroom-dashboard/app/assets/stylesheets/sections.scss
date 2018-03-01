@@ -1,3 +1,18 @@
 // Place all the styles related to the Sections controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
+,rgb(169, 122, 226)
+
+40%,rgba(218, 145, 218, 0.822),rgb(162, 104, 179)); 
+background-attachment: fixed;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: rgba(0,0,0,.8);
+}
