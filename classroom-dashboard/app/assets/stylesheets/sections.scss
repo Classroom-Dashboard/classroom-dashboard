@@ -4,6 +4,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+// Andromeda by espoirthemes //
+
+//    + feel free to edit this as much as you want! but don't remove credit
+//	+ do not release as your own or use as a base
+
+// star code credit: http://codepen.io/lbebber/pen/xbZKvQ
+  
+
 body{
     margin: 0;
     font-family: Montserrat, sans-serif;
@@ -15,4 +24,26 @@ background-attachment: fixed;
     word-wrap: break-word;
     font-size: 16px;
     color: rgba(0,0,0,.8);
+}
+
+
+h1 {
+    text-align: center;  
+}
+
+
+a, a:hover, a:active, a:visited { 
+    color: white; 
+    
+}
+
+h2 {
+    text-align: center;   
+}
+
+
+P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
 }
