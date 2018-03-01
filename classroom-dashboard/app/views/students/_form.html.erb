@@ -1,3 +1,5 @@
+<!-- form for creating new students within a section-->
+
 <%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
   <%= f.file_field :student_img %>
   <%= f.input :firstName, label: "First Name" %>
@@ -6,5 +8,3 @@
   <%= f.input :info, label: "Additional Info" %>
   <%= f.button :submit %>
 <% end %>
-
-<!-- form for creating new students. TODO: make some fields required? -->

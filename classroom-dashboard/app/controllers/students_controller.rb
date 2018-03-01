@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
   before_action :find_section
 
   def index
-    @students = Student.all.order("lastName ASC")
+    @students = Student.all.order("lastname ASC")
   end
 
   def new
@@ -13,9 +13,10 @@ class StudentsController < ApplicationController
   def show
   end
 
+  # this function currently not used
   #  creates a list of students added
   def student_list
-    @students = Student.all.order("lastName ASC")
+    @students = Student.all.order("lastname ASC")
   end
 
 # when /randomize page loads, a random student is loaded into @student
@@ -60,10 +61,12 @@ class StudentsController < ApplicationController
       params.require(:student).permit(:student_img, :firstName, :lastname, :pronouns, :info)
     end
 
+    # finds a student's id 
     def find_student
       @student = Student.find(params[:id])
     end
 
+    # finds what section a student is in
     def find_section
       @section = Section.find(params[:section_id])
     end
