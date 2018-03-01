@@ -1,4 +1,4 @@
-<%= simple_form_for @student, :html => { :multipart => true } do |f|%>
+<%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
   <%= f.file_field :student_img %>
   <%= f.input :firstName, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>

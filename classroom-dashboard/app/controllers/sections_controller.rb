@@ -5,7 +5,7 @@ class SectionsController < ApplicationController
 
 	# Order in which the sections are listed on the home page
 	def index
-		@section = Section.all.order("year DESC")
+		@section = Section.all.order("semester DESC")
 	end
 
 	def show
