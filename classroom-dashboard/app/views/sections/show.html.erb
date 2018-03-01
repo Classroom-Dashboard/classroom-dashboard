@@ -2,30 +2,22 @@
 <!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
 
 <!-- Display section information -->
-<div style="text-align:center"> 
-    <%= @section.course %>
-    <%= @section.semester %>
-    <%= @section.year %>
-    <%= @section.professor %>
-</div>
-
+<h1> <%= @section.course %> <%= @section.semester %></h1>
+<!-- <%= @section.year %>
+<%= @section.professor %> -->
 
 <!-- Ability to add a student to a section -->
-<div style="text-align:center"> 
-    <p> <%= link_to "Add Student", new_student_path%> </p>
+<%= link_to "Add Student", new_section_student_path(@section)%>
 
-    <!-- Display a random student -->
-    <p><%= link_to "Random Student!", randomize_path%> </p>
+<!-- Display a random student -->
 
-    <!-- List all of the students in this section -->
-    <p><%= link_to "Student List", student_list_path%></p>
+<!-- List all of the students in this section -->
 
 
-    <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
-    <p><%= link_to "Edit", edit_section_path(@section)%></p>
-    <p><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
-</div></p>
+<!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
+<%= link_to "Edit", edit_section_path(@section)%>
+<%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
+
 <%= render @section.students.order("lastname ASC") %>
 <!-- loads in students by last name alphabetically -->
 <!-- refers to students/_student.html.erb for template  -->
-
