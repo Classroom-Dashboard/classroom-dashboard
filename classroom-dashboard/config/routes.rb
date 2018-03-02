@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'sections/:id/randomize', to: "sections#randomize", as: :section_randomize
 
 
+  get 'sections/:id/student_list', to: "sections#student_list", as: :section_student_list
 
 
 end

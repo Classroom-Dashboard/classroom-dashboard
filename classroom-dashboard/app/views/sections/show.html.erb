@@ -19,13 +19,11 @@
 
     <!-- List all of the students in this section -->
 
-
     <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
     <p><%= link_to "Edit", edit_section_path(@section)%></p>
     <p><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
 </div></p>
-<%= render @section.students.order("lastname ASC") %>
-<!-- <%= render @section.students.order("RANDOM()").limit(1)[0] %> -->
 
+<%= render @section.students.order("lastname ASC") %>
 <!-- loads in students by last name alphabetically -->
 <!-- refers to students/_student.html.erb for template  -->
