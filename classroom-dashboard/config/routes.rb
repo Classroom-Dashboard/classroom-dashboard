@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # root 'students#index'
 
-  get 'sections/:section_id/randomize', to: "students#randomize", as: :randomize 
+  get 'sections/:id/randomize', to: "sections#randomize", as: :section_randomize
 
 
 

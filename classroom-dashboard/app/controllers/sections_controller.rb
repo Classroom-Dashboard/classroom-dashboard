@@ -19,6 +19,10 @@ class SectionsController < ApplicationController
 	def edit
 	end
 
+	# when /randomize page loads, a random student is loaded into @student
+	def randomize
+	end
+
 	# Ability to update/edit the fields of a Section
 	def update
 		# If Section is updated successfully

@@ -15,10 +15,9 @@
     <p> <%= link_to "Add Student", new_section_student_path(@section)%> </p>
 
     <!-- Display a random student -->
-    <p><%= link_to "Random Student!", randomize_path%> </p>
+    <p><%= link_to "Random Student!", section_randomize_path(@section)%> </p>
 
     <!-- List all of the students in this section -->
-    <p><%= link_to "Student List", student_list_path%></p>
 
 
     <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
@@ -26,5 +25,7 @@
     <p><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
 </div></p>
 <%= render @section.students.order("lastname ASC") %>
+<!-- <%= render @section.students.order("RANDOM()").limit(1)[0] %> -->
+
 <!-- loads in students by last name alphabetically -->
 <!-- refers to students/_student.html.erb for template  -->
