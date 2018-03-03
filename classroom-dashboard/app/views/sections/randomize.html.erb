@@ -1,8 +1,1 @@
- <%= render @section.students %> 
-
-<!-- reloads this page to load new random student -->
-<!-- <a href="<%= @section.id %>/randomize">reload </a> -->
-<!-- TODO: get reload link to work ^ -->
-<!--
-<%= link_to "Random Student!", randomize_path %>
- sometimes loads twice... possibly a chrome thing?? -->
+ <%= render @section.students.all.order("RANDOM()").limit(1)[0] %>
