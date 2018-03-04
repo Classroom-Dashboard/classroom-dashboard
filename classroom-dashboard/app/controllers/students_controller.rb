@@ -19,10 +19,6 @@ class StudentsController < ApplicationController
     @students = Student.all.order("lastname ASC")
   end
 
-# when /randomize page loads, a random student is loaded into @student
-  def randomize
-    @student = Student.order("RANDOM()").limit(1)[0]
-  end
 
   # saves new student and reloads index page
   def create
