@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
 
     if @student.save
       # redirect to section page when done
-      redirect_to section_path(@section)
+      redirect_to section_students_path(@section)
     else
       render 'new'
     end
