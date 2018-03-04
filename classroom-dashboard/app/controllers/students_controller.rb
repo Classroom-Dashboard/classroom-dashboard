@@ -13,16 +13,6 @@ class StudentsController < ApplicationController
   def show
   end
 
-  # this function currently not used
-  #  creates a list of students added
-  def student_list
-    @students = Student.all.order("lastname ASC")
-  end
-
-# when /randomize page loads, a random student is loaded into @student
-  def randomize
-    @student = Student.order("RANDOM()").limit(1)[0]
-  end
 
   # saves new student and reloads index page
   def create
@@ -31,7 +21,7 @@ class StudentsController < ApplicationController
 
     if @student.save
       # redirect to section page when done
-      redirect_to section_path(@section)
+      redirect_to section_students_path(@section)
     else
       render 'new'
     end

@@ -1,7 +1,7 @@
 class SectionsController < ApplicationController
 
 	# Find the section before any other action
-	before_action :find_section, only: [:show, :edit, :update, :destroy, :randomize]
+	before_action :find_section, only: [:show, :edit, :update, :destroy, :flashcards]
 
 	# Order in which the sections are listed on the home page
 	def index
@@ -19,9 +19,10 @@ class SectionsController < ApplicationController
 	def edit
 	end
 
-	# when /randomize page loads, a random student is loaded into @student
-	def randomize
+	# when /flashcards page loads, a random student is loaded into @student
+	def flashcards
 	end
+
 
 	# Ability to update/edit the fields of a Section
 	def update
