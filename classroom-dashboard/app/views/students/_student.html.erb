@@ -1,7 +1,8 @@
-<!-- student display formatting used in show.html.erb -->
+<!-- loaded in calls to render @student for randomization and student list-->
+
 <div class="col-md-3">
   <a href="<%= @section.id %>/students/<%= student.id %>">
     <%= image_tag student.student_img.url(:student_index) %>
-    <h2><%= student.firstName %> </h2>
+    <h1><%= link_to student.firstName, section_student_path(student.section_id, student) %></h1>
   </a>
 </div>

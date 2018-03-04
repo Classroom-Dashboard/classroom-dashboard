@@ -23,6 +23,7 @@ class SectionsController < ApplicationController
 	def flashcards
 	end
 
+
 	# Ability to update/edit the fields of a Section
 	def update
 		# If Section is updated successfully

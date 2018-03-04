@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get 'sections/:id/flashcards', to: "sections#flashcards", as: :section_flashcards
 
 
-  get 'sections/:id/student_list', to: "sections#student_list", as: :section_student_list
 
 
 end

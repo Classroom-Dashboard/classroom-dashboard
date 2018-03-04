@@ -1,4 +1,4 @@
- <%= render @section.students.all.order("RANDOM()").limit(1)[0] %>
+<%= render @section.students.all.order("RANDOM()").limit(1)[0] %>
 
- <!-- Display a random student -->
+ <!-- Generate a random student by reloading page-->
  <p><%= link_to "Random Student!", section_flashcards_path(@section)%> </p>

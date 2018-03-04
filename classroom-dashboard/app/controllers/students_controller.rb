@@ -13,12 +13,6 @@ class StudentsController < ApplicationController
   def show
   end
 
-  # this function currently not used
-  #  creates a list of students added
-  def student_list
-    @students = Student.all.order("lastname ASC")
-  end
-
 
   # saves new student and reloads index page
   def create
