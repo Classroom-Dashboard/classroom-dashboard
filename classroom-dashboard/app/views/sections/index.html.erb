@@ -1,6 +1,13 @@
 <!-- HOMEPAGE -->
 
 <!-- List each section and a link to that section's info and it's student list -->
+
+<h3 > Classroom Dashboard</h3>
+
+<div class="style_alien">
+<%= image_tag("alien.png", :alt => "rss feed") %>
+</div>
+
 <% @section.each do |section| %>
 	<h1><%= link_to section.course + " " + section.semester, section_path(section) %></h1>
 
@@ -8,3 +15,5 @@
 
 <!-- Button to add a new Section -->
 <h2><%= link_to "New Course Section", new_section_path %></h2>
+
+
