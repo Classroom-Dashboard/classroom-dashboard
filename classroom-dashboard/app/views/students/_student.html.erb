@@ -2,5 +2,5 @@
 
 <div class="col-md-3">
     <%= image_tag student.student_img.url(:student_index) %>
-    <h1><%= link_to student.firstName, section_student_path(student.section_id, student) %></h1>
+    <%= link_to student.firstName, section_student_path(student.section_id, student) %>
 </div>

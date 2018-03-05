@@ -31,7 +31,7 @@ body{
     ,rgb(169, 122, 226)
 
     40%,rgba(218, 145, 218, 0.822),rgb(162, 104, 179));
-background-attachment: fixed;
+    background-attachment: fixed;
     word-wrap: break-word;
     font-size: 16px;
     color: rgba(0,0,0,.8);
@@ -64,8 +64,6 @@ h1 {
 
 a, a:hover, a:active, a:visited {
     color: white;
-
-
 }
 
 h2 {
@@ -80,5 +78,5 @@ h2 {
 }
 
 h4 {
-    # Add design for header 'Add new student'
+    # Add design for header 'Add new student' in form
 }
