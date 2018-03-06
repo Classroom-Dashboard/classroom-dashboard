@@ -25,7 +25,6 @@
 @import "bootstrap";
 
 body{
-    margin: 0;
 
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
     ,rgb(169, 122, 226)
@@ -37,6 +36,7 @@ body{
     color: rgba(0,0,0,.8);
 
 }
+
 
 h3 {
     text-align: center;
@@ -51,14 +51,33 @@ h3 {
 
 }
 
+.new_link{
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      width: 200px;
+      border: 3px solid white;
+      font-size: 50%
+}
+
+.link_home {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  width: 200px;
+  border: 3px solid white;
+  font-size: 70%;
+
+}
+
 h1 {
     text-align: center;
     font-family: American Typewriter, serif;
-    position: fixed;
-    top: 50%;
+    /* position: fixed;
     left: 50%;
+    right: 50%
     margin-top: -50px;
-    margin-left: -100px;
+    margin-left: -150px; */
 }
 
 
