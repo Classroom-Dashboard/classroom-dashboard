@@ -23,6 +23,7 @@
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 body{
 
@@ -41,23 +42,23 @@ body{
 h3 {
     text-align: center;
     color:white;
-    font-family: American Typerwriter, serif
+    font-family: 'Muli', sans-serif;
 
 }
 
 .style_alien{
     max-width:50%;
     max-height:50%;
+    position: center;
 
 }
 
-.new_link{
-      position: fixed;
-      top: 5px;
-      right: 5px;
+.new_student_link{
+      text-align: center;
+      top: 130px;
+      left:
       width: 200px;
-      border: 3px solid white;
-      font-size: 50%
+      font-size: 35%
 }
 
 .link_home {
@@ -72,7 +73,10 @@ h3 {
 
 h1 {
     text-align: center;
-    font-family: American Typewriter, serif;
+    font-family: 'Muli', sans-serif;
+    color: white;
+    font-size: 300%
+
     /* position: fixed;
     left: 50%;
     right: 50%
@@ -87,7 +91,7 @@ a, a:hover, a:active, a:visited {
 
 h2 {
     text-align: center;
-    font-family: American Typewriter, serif;
+    font-family: 'Muli', sans-serif;
 
     position: fixed;
     top: 50%;
