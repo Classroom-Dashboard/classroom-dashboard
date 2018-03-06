@@ -1,3 +1,14 @@
+<h1><div class="link_home"><%= link_to "Classroom Dashboard", root_path%></div></h1>
+
 <!-- student list page at section/:section_id/students -->
-<h3>Students</h3>
+<h1>Students</h1>
+
+<h1><div class="new_link"> <%= link_to "Add Student", new_section_student_path(@section)%></div> </h1>
+
+<br>
+<br>
+<br>
+<br>
+<!-- fix this to better form lol  -->
+
 <%= render @section.students.all.order("lastname ASC") %>
