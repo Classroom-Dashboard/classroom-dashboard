@@ -23,13 +23,13 @@
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300');
+
 
 body{
 
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
     ,rgb(169, 122, 226)
-
     40%,rgba(218, 145, 218, 0.822),rgb(162, 104, 179));
     background-attachment: fixed;
     word-wrap: break-word;
@@ -39,21 +39,50 @@ body{
 }
 
 
+.navbar-default {
+	background-color:transparent !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;
+}
+
+/* Classroom Dashboard */
+.navbar-header a {
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  display: inline-block;
+  float: none;
+}
+
+/* Add Course Section */
+.navbar-nav a {
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
 h3 {
     text-align: center;
     color:white;
-    font-family: 'Muli', sans-serif;
-
+    font-family: 'Work Sans', sans-serif;
 }
 
-.style_alien{
-    max-width:50%;
-    max-height:50%;
-    position: center;
-
+div.style_alien img {
+    max-width:10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.new_student_link{
+div.style_alien_navbar img {
+    max-width:3%;
+    display: block;
+    margin-right: auto;
+}
+
+/*.new_student_link{
+      font-family: 'Work Sans', sans-serif;
       text-align: center;
       top: 130px;
       left:
@@ -62,20 +91,21 @@ h3 {
 }
 
 .link_home {
+  font-family: 'Work Sans', sans-serif;
   position: fixed;
   left: 5px;
   top: 5px;
   width: 200px;
   border: 3px solid white;
   font-size: 70%;
-
 }
+*/
 
 h1 {
     text-align: center;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color: white;
-    font-size: 300%
+    font-size: 700;
 
     /* position: fixed;
     left: 50%;
@@ -89,9 +119,13 @@ a, a:hover, a:active, a:visited {
     color: white;
 }
 
+p {
+  font-family: 'Work Sans', sans-serif;
+}
+
 h2 {
     text-align: center;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 
     position: fixed;
     top: 50%;
