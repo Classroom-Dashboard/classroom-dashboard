@@ -14,11 +14,15 @@
 
       <div class="container">
 
+        <!--<div class="style_alien_navbar">
+          <%= image_tag("alien.png", :alt => "rss feed") %>
+        </div>
+      -->
         <div class="navbar-header">
-          <%= link_to "Classroom Dashboard", root_path, class: "navbar-brand" %>
+          <%= link_to "CLASSROOM DASHBOARD", root_path, class: "navbar-brand" %>
         </div>
 
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" style="float:right;">
           <li><%= link_to "Add Course Section", new_section_path %></li>
         </ul>
       </div>
