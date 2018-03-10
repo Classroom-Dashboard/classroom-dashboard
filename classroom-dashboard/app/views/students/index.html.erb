@@ -1,10 +1,13 @@
 <!-- student list page at section/:section_id/students -->
 <h1>Students</h1>
 
-  <div style="text-align:center">
-    <p><%= link_to "Add Student", new_section_student_path(@section)%></p>
-  </div>
+<h5><%= link_to "Back to Course", section_path(@section)%></h5>
 
+<div style="text-align:center">
+  <p><%= link_to "Add Student", new_section_student_path(@section)%></p>
+</div>
+
+<!-- Are these still needed? -->
 <br>
 <br>
 <br>

@@ -16,6 +16,7 @@ class SectionsController < ApplicationController
 		@section = Section.new
 	end
 
+	# Does this edit function work by default?
 	def edit
 	end
 

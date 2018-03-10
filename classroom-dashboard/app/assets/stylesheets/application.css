@@ -27,7 +27,6 @@
 
 
 body{
-
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
     ,rgb(169, 122, 226)
     40%,rgba(218, 145, 218, 0.822),rgb(162, 104, 179));
@@ -35,7 +34,6 @@ body{
     word-wrap: break-word;
     font-size: 16px;
     color: rgba(0,0,0,.8);
-
 }
 
 
@@ -81,7 +79,10 @@ div.style_alien_navbar img {
     margin-right: auto;
 }
 
-/*.new_student_link{
+/*
+Are we still using these links?
+
+.new_student_link{
       font-family: 'Work Sans', sans-serif;
       text-align: center;
       top: 130px;
@@ -134,6 +135,9 @@ h2 {
     margin-left: -120px;
 }
 
-h4 {
-    # Add design for header 'Add new student' in form
+/* "Back to ---" buttons */
+h5 {
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    margin-left: 25px
 }
