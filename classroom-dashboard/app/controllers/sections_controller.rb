@@ -18,6 +18,7 @@ class SectionsController < ApplicationController
 
 	# Does this edit function work by default?
 	def edit
+		@Student = Student.find(params[:id])
 	end
 
 	# when /flashcards page loads, a random student is loaded into @student
