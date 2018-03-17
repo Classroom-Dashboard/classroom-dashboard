@@ -7,11 +7,4 @@
   <p><%= link_to "Add Student", new_section_student_path(@section)%></p>
 </div>
 
-<!-- Are these still needed? -->
-<br>
-<br>
-<br>
-<br>
-<!-- fix this to better form lol  -->
-
 <%= render @section.students.all.order("lastname ASC") %>
