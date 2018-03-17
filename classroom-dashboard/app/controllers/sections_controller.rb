@@ -17,6 +17,7 @@ class SectionsController < ApplicationController
 	end
 
 	def edit
+		@Student = Student.find(params[:id])
 	end
 
 	# when /flashcards page loads, a random student is loaded into @student

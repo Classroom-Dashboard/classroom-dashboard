@@ -1,17 +1,19 @@
 <div style="text-align:center">
 <!-- individual student's page -->
-<%= image_tag @student.student_img.url(:student_index) %>
-<br>
-<%= @student.firstName %>
-<%= @student.lastname %>
-<br>
-<%= @student.pronouns %>
-<br>
-<%= @student.school %>
-<br>
-<%= @student.info %>
-<br>
+  <%= image_tag @student.student_img.url(:student_index) %>
+  <br>
+  <%= @student.firstName %>
+  <%= @student.lastname %>
+  <br>
+  <%= @student.pronouns %>
+  <br>
+  <%= @student.school %>
+  <br>
+  <%= @student.info %>
+  <br>
 
-<%= link_to "Edit Student", edit_section_student_path %>
-<%= link_to "Delete Student", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%>
+  <!-- Adding link back to course -->
+
+  <%= link_to "Edit Student", edit_section_student_path %>
+  <%= link_to "Delete Student", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%>
 </div>
