@@ -12,6 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20180317051706) do
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "course"
     t.string "semester"
