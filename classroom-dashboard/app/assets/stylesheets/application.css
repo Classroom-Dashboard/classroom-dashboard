@@ -79,29 +79,6 @@ div.style_alien_navbar img {
     margin-right: auto;
 }
 
-/*
-Are we still using these links?
-
-.new_student_link{
-      font-family: 'Work Sans', sans-serif;
-      text-align: center;
-      top: 130px;
-      left:
-      width: 200px;
-      font-size: 35%
-}
-
-.link_home {
-  font-family: 'Work Sans', sans-serif;
-  position: fixed;
-  left: 5px;
-  top: 5px;
-  width: 200px;
-  border: 3px solid white;
-  font-size: 70%;
-}
-*/
-
 h1 {
     text-align: center;
     font-family: 'Work Sans', sans-serif;
