@@ -1,7 +1,13 @@
 <!-- form for creating new students within a section-->
 
 <%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
+ 
+  <!-- carrierwave -->
+  <%= f.file_field :studentimage %>
+
+  <!-- paperclip -->
   <%= f.file_field :student_img %>
+  
   <%= f.input :firstName, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>
   <%= f.input :pronouns, label: "Pronouns"%>
