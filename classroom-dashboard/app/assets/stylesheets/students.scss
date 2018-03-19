@@ -3,13 +3,4 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-/* Is this code necessary for our application?
- */
-
-
-.student {
-    font-family: 'Work Sans', sans-serif;
-    height: 350px;
-    width: 250px;
-}
+@import "*";
