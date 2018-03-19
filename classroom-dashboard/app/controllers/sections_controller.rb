@@ -2,6 +2,8 @@ class SectionsController < ApplicationController
 
 	# Find the section before any other action
 	before_action :find_section, only: [:show, :edit, :update, :destroy, :flashcards]
+	
+	 # Do empty methods need to be filled?
 
 	# Order in which the sections are listed on the home page
 	def index
