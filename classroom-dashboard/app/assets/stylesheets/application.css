@@ -25,6 +25,8 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300');
 
+// should this be restructured a certain way so its more intuitive?
+
 
 body{
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
