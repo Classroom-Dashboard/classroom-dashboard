@@ -1,7 +1,8 @@
 class StudentsController < ApplicationController
   before_action :find_student, only: [:edit, :show, :update, :destroy]
   before_action :find_section
-
+  
+  
   def index
     @students = Student.all.order("lastname ASC")
   end
