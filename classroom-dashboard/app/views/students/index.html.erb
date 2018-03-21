@@ -1,10 +1,10 @@
 <!-- student list page at section/:section_id/students -->
-<h1>Students</h1>
+<h1 class = students_header>Students</h1>
 
-<h5><%= link_to "Back to Course", section_path(@section)%></h5>
+<h5 class = back_to_course><%= link_to "Back to Course", section_path(@section)%></h5>
 
 <div style="text-align:center">
-  <p><%= link_to "Add Student", new_section_student_path(@section)%></p>
+  <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
 </div>
 
 <%= render @section.students.all.order("lastname ASC") %>

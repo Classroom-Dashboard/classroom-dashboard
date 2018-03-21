@@ -7,5 +7,5 @@
 </div>
 
 <% @section.each do |section| %>
-	<h1><%= link_to section.course + " " + section.semester, section_path(section) %></h1>
+	<h1 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section) %></h1>
 <% end %>
