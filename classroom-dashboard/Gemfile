@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
@@ -40,6 +41,23 @@ gem 'jbuilder', '~> 2.5'
 
 
 
+###########################
+# Google OAuth Login Gems #
+###########################
+
+# Use Devise for authentication
+# (Devise gem supports integration with Omniauth which is a gem that standardizes third party authentication for Rails applications.)
+gem 'devise', '~> 4.4', '>= 4.4.3'
+# Use Omniauth Google plugin
+gem 'omniauth-google-oauth2', '~> 0.5.3'
+# Use ActiveRecord Sessions
+# (Database sessions are facilitated by the activerecord-session_store gem which has been added towards the bottom.)
+gem 'activerecord-session_store', '~> 1.1', '>= 1.1.1'
+
+###########################
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -58,6 +76,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  ####################
+  # For Google OAuth #
+  ####################
+
+  # Use Dotenv for environment variables
+  gem 'dotenv', '~> 2.2.1'
+  ####################
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
