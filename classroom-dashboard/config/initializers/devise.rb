@@ -264,7 +264,7 @@ Devise.setup do |config|
   # This following line might not be necessary
   #require "omniauth-google-oauth2"
 
-  config.omniauth :google_oauth2, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_APP_SECRET'], scope: 'userinfo.email,userinfo.profile'
+  config.omniauth :google_oauth2, ENV["CLIENT_ID"], ENV["CLIENT_SECRET"], scope: 'userinfo.email,userinfo.profile'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

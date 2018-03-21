@@ -7,12 +7,8 @@ Rails.application.routes.draw do
 
   root 'sections#index'
 
-  # root 'students#index'
-
   get 'sections/:id/flashcards', to: "sections#flashcards", as: :section_flashcards
 
-  #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth' }
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
 
 end

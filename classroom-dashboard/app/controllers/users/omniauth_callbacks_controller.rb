@@ -1,4 +1,4 @@
-class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Google callback
   def google_oauth2
@@ -13,24 +13,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
 
-  def self.from_omniauth(access_token)
-    data = access_token.info
-    user = User.where(email: data['email']).first
-
-    # Uncomment the section below if you want users to be created if they don't exist
-    # unless user
-    #     user = User.create(name: data['name'],
-    #        email: data['email'],
-    #        password: Devise.friendly_token[0,20]
-    #     )
-    # end
-    user
-end
-
-
   def failure
     flash[:error] = 'There was a problem signing you in. Please register or try signing in later.'
     redirect_to new_user_registration_url
   end
 
+  
 end
