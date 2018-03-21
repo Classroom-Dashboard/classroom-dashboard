@@ -26,7 +26,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300');
 
 
-
 body{
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
     ,rgb(169, 122, 226)
@@ -46,12 +45,14 @@ body{
 }
 
 /* Classroom Dashboard */
-.navbar-header a {
-  color: white !important;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
-  display: inline-block;
-  float: none;
+.navbar-header {
+    a {
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    display: inline-block;
+    float: none;
+  }
 }
 
 /* Add Course Section */
@@ -88,7 +89,7 @@ h1 {
     font-size: 700;
 }
 
-*/ Homepage links */
+/* Homepage links */
 a, a:hover, a:active, a:visited {
     color: white;
 }
@@ -114,4 +115,3 @@ h5 {
     font-family: 'Work Sans', sans-serif;
     margin-left: 25px
 }
-
