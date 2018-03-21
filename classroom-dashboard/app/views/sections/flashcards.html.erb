@@ -3,10 +3,9 @@
 <br>
 <br>
 <br>
+
 <div style="text-align:center">
-<%= render @section.students.all.order("RANDOM()").limit(1)[0] %>
+  <%= render @section.students.all.order("RANDOM()").limit(1)[0] %>
 </div>
 
-<h2 style="text-align:center"><%= link_to "Random Student!", section_flashcards_path(@section)%></h2>
-
-</div>
+<h2 class = random_student_link><%= link_to "Random Student!", section_flashcards_path(@section)%></h2>

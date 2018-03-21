@@ -37,6 +37,11 @@ body{
 }
 
 
+/******************/
+/* Navigation Bar */
+/******************/
+
+/*** application.html.erb ***/
 .navbar-default {
 	background-color:transparent !important;
 	border-color:transparent;
@@ -63,24 +68,9 @@ body{
 }
 
 
-h3 {
-    text-align: center;
-    color:white;
-    font-family: 'Work Sans', sans-serif;
-}
-
-div.style_alien img {
-    max-width:10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div.style_alien_navbar img {
-    max-width:3%;
-    display: block;
-    margin-right: auto;
-}
+/***************/
+/* Header tags */
+/***************/
 
 h1 {
     text-align: center;
@@ -89,19 +79,50 @@ h1 {
     font-size: 700;
 }
 
-/* Homepage links */
-a, a:hover, a:active, a:visited {
-    color: white;
-}
-
-p {
+/* sections > edit.html.erb */
+h1.edit_section_info {
+  text-align: center;
   font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 700;
 }
 
-h2 {
+/* sections > index.html.erb */
+h1.link_to_section {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 700;
+}
+
+/* sections > new.html.erb */
+h1.create_new_section {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 700;
+}
+
+/* student > new.html.erb */
+h1.edit_student {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 700;
+}
+
+/* student > index.html.erb */
+h1.students_header {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 700;
+}
+
+/* sections > flashbards.html.erb */
+h2.random_student_link {
     text-align: center;
     font-family: 'Work Sans', sans-serif;
-
     position: fixed;
     top: 50%;
     left: 70%;
@@ -109,9 +130,77 @@ h2 {
     margin-left: -120px;
 }
 
-/* "Back to ---" buttons */
-h5 {
+/* students > new.html.erb */
+h3.add_new_student {
+    text-align: center;
+    color:white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* students > index.html.erb */
+h5.back_to_course {
     text-align: left;
     font-family: 'Work Sans', sans-serif;
     margin-left: 25px
+}
+
+
+/***************/
+/* Div classes */
+/***************/
+
+/* index.html.erb */
+div.style_alien img {
+    max-width:10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* navbar */
+div.style_alien_navbar img {
+    max-width:3%;
+    display: block;
+    margin-right: auto;
+}
+
+/*********************/
+/* Paragraph classes */
+/*********************/
+
+/* sections > show.html.erb */
+p.student_list_link {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* sections > show.html.erb */
+p.flashcards_link {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* sections > show.html.erb */
+p.edit_section_link {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* sections > show.html.erb */
+p.delete_section_link {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* students > index.html.erb */
+p.add_student {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/******************/
+/* Homepage links */
+/******************/
+
+a, a:hover, a:active, a:visited {
+    color: white;
+}
+
+p {
+  font-family: 'Work Sans', sans-serif;
 }
