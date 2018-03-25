@@ -1,17 +1,15 @@
 class SectionsController < ApplicationController
-  
-  # Find the section before any other action
+
+  # Find the section ID before any other action
   before_action :find_section, only: [:show, :edit, :update, :destroy, :flashcards]
 
-  # Order in which the sections are listed on the home page
   def index
     @section = Section.all.order("semester DESC")
   end
-	
+
   def show
   end
 
-  # Create a new Section
   def new
     @section = Section.new
   end
@@ -20,16 +18,14 @@ class SectionsController < ApplicationController
     @Student = Student.find(params[:id])
   end
 
-  # when /flashcards page loads, a random student is loaded into @student
+  # TODO: re-implement random flashcards (currently works by reloading page)
   def flashcards
   end
 
 
-  # Ability to update/edit the fields of a Section
   def update
     # If Section is updated successfully
     if @section.update(section_params)
-      # Redirect page to home page
       redirect_to section_path(@section)
     else
     # Display form to edit Section info
@@ -37,16 +33,13 @@ class SectionsController < ApplicationController
     end
   end
 
-  # Ability to delete a Section
   def destroy
     @section.destroy
       redirect_to root_path
   end
 
-  # Ability to create a new Section
   def create
     @section = Section.new(section_params)
-    # If creation is successful, redirect to home page
     if @section.save
       redirect_to root_path
     else
