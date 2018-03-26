@@ -16,6 +16,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
+    @student.firstName = @student.student_img_file_name
     @student.section_id = @section.id
 
     if @student.save
