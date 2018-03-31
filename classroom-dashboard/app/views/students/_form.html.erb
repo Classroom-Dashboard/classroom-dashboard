@@ -6,7 +6,9 @@
   <!-- paperclip -->
   <%= f.file_field :student_img %>
 
-  <%= f.input :firstName, label: "First Name" %>
+  <!-- needs testing -->
+  <%= f.input :firstName, label: "First Name", input_html: {value: :student_img_file_name} %>
+  
   <%= f.input :lastname, label: "Last Name" %>
   <%= f.input :pronouns, label: "Pronouns"%>
   <%= f.input :school, label: "School"%>
