@@ -4,4 +4,5 @@ class Student < ApplicationRecord
   validates_attachment_content_type :student_img, content_type: /\Aimage\/.*\z/
 
   mount_uploader :image, StudentImageUploader
+
 end

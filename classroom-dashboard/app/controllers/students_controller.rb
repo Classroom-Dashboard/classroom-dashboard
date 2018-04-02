@@ -9,6 +9,8 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    # calls new from upload controller for dropzone 
+    @upload = Upload.new
   end
 
   def show
@@ -40,7 +42,7 @@ class StudentsController < ApplicationController
 
   def destroy
     @student.destroy
-    redirect_to section_path(@section)
+    redirect_to section_students_path(@section)
   end
 
 
