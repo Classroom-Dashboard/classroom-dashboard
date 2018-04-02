@@ -20,6 +20,15 @@ class UploadsController < ApplicationController
       end
   end
 
+  def destroy
+    @upload = Upload.find(params[:id])
+    if @upload.destroy
+      render json: { message: "file deleted from server"}
+    else
+      render json: { message: @image.errors.full_messages.join(",")}
+    end
+  end
+
     def list
       students = []
       Student.all.each do |student|
