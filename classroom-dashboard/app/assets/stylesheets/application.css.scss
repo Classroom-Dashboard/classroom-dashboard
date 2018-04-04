@@ -11,7 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require dropzone/dropzone
  *= require_self
+
  */
 
 /* Andromeda by espoirthemes //
@@ -197,8 +199,9 @@ p.add_student {
 /* Homepage links */
 /******************/
 
+// changed to black for dropzone removelink, temporary solution to focus on functionality for now
 a, a:hover, a:active, a:visited {
-    color: white;
+    color: black;
 }
 
 p {

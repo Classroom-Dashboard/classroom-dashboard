@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   resources :students
   end
 
+  resources :uploads
+
+  # necessary for dropzone to work, however this means that /uploads is a viable link which we don't want. TODO: address this
+  post '/uploads' => 'uploads#create'
+
   root 'sections#index'
 
   get 'sections/:id/flashcards', to: "sections#flashcards", as: :section_flashcards

@@ -1,14 +1,12 @@
 <!-- form for creating/editing students within a section-->
 
+
+<!-- dropzone  -->
+<%= form_for @upload, html: { multipart: true, class: "dropzone", id: "my-dropzone" } do |f| %>
+<% end %>
+
 <%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
-
-
-  <!-- paperclip -->
-  <%= f.file_field :student_img %>
-
-  <!-- needs testing -->
-  <%= f.input :firstName, label: "First Name", input_html: {value: :student_img_file_name} %>
-  
+  <%= f.input :firstName, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>
   <%= f.input :pronouns, label: "Pronouns"%>
   <%= f.input :school, label: "School"%>
