@@ -39,6 +39,5 @@
     <!-- List all of the students in this section -->
 
     <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
-    <p class = edit_section_link><%= link_to "Edit", edit_section_path(@section)%></p>
-    <p class = delete_section_link><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
+    <p class = edit_section_link><%= link_to "Edit/Delete", edit_section_path(@section)%></p>
 </div></p>

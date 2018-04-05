@@ -12,3 +12,8 @@
 <%= f.input :info, label: "Additional Info" %>
 <%= f.button :submit %>
 <% end %>
+
+<!-- link back to student page  -->
+<h5><%= link_to "Cancel", section_student_path(@student.section_id, @student)%></h5>
+
+<%= link_to "DELETE", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%>

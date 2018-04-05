@@ -15,7 +15,7 @@ class SectionsController < ApplicationController
   end
 
   def edit
-    @Student = Student.find(params[:id])
+    @section = Section.find(params[:id])
   end
 
   # TODO: re-implement random flashcards (currently works by reloading page)
