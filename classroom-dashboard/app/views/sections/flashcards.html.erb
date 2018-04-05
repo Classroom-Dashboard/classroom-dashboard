@@ -1,3 +1,23 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
+  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+</div>
+
+<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "200px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+
 <h1> Flashcards </h1>
 <br>
 <br>
