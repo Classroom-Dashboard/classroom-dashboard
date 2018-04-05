@@ -1,7 +1,30 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
+  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+</div>
+
+
+
+<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<h5 class = back_to_course><%= link_to "Back to Course", section_path(@section)%></h5>
+
+
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "200px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+
+
+
 <!-- student list page at section/:section_id/students -->
 <h1 class = students_header>Students</h1>
-
-<h5 class = back_to_course><%= link_to "Back to Course", section_path(@section)%></h5>
 
 <div style="text-align:center">
   <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>

@@ -2,12 +2,16 @@
 
 <!-- List each section and a link to that section's info and it's student list -->
 
+<br>
+<h1 class = students_header>Sections</h1>
+<br>
+<br>
+<% if admin_signed_in? %>
+	<% @section.each do |section| %>
+		<h3 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section) %></h3>
+	<% end %>
+<% end %>
+
 <div class="style_alien">
 	<%= image_tag("alien.png", :alt => "rss feed") %>
 </div>
-
-<% if admin_signed_in? %>
-	<% @section.each do |section| %>
-		<h1 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section) %></h1>
-	<% end %>
-<% end %>

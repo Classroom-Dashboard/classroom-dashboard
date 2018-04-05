@@ -2,48 +2,45 @@
 <!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
 
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
-    <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-  </div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
+  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+</div>
 
-  <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-
-  <script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "200px";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-  </script>
+<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
 
-  <!-- Display section information -->
-  <h1>
-      <%= @section.course %>
-      <%= @section.semester %>
-      <!-- <%= @section.year %>
-      <%= @section.professor %> -->
-  </h1>
-  <br>
-  <br>
-  <br>
-  <br>
-  <!-- fix this to better form lol  -->
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "200px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+
+<!-- Display section information -->
+<h1>
+    <%= @section.course %>
+    <%= @section.semester %>
+    <!-- <%= @section.year %>
+    <%= @section.professor %> -->
+</h1>
+
+<!-- fix this to better form lol  -->
 
 <!-- Ability to add a student to a section -->
-  <div style="text-align:center">
-    <!--<p class = student_list_link><%= link_to "Student List", section_students_path(@section)%> </p>-->
-      <!-- Display a random student -->
-      <!--<p class = flashcards_link><%= link_to "Flashcards", section_flashcards_path(@section)%> </p>-->
+<div style="text-align:center">
+  <!--<p class = student_list_link><%= link_to "Student List", section_students_path(@section)%> </p>-->
+    <!-- Display a random student -->
+    <!--<p class = flashcards_link><%= link_to "Flashcards", section_flashcards_path(@section)%> </p>-->
 
-      <!-- List all of the students in this section -->
+    <!-- List all of the students in this section -->
 
-      <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
-      <p class = edit_section_link><%= link_to "Edit", edit_section_path(@section)%></p>
-      <p class = delete_section_link><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
-  </div></p>
+    <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
+    <p class = edit_section_link><%= link_to "Edit", edit_section_path(@section)%></p>
+    <p class = delete_section_link><%= link_to "Delete", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %>
+</div></p>
