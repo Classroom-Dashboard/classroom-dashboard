@@ -1,4 +1,4 @@
-# classroom-dashboard
+# Classroom Dashboard
 
 Classroom Dashboard is a tool to facilitate student engagement during class and lecture. A student and a professor use the tool in different ways to foster participation, familiarity between student-professor relationships, and help build student-student relationships as well. 
 
