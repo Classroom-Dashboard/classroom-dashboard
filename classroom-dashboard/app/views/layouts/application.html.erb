@@ -11,29 +11,22 @@
   <body>
 
     <nav class="navbar navbar-default">
-
       <div class="container">
-
-        <ul class="nav navbar-nav">
-          <% if admin_signed_in? %>
+        <% if admin_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- deleted user sign in check (see above)  -->
             <li><%= link_to "SIGN OUT", destroy_admin_session_path, method: :delete %></li>
-          <% else %>
+          </ul>
+        <% else %>
+          <ul class="nav navbar-nav">
             <li><%=link_to "SIGN UP", new_admin_registration_path %></li>
             <li><%= link_to "LOGIN", new_admin_session_path%></li>
-          <% end %>
-        </ul>
+          </ul>
+        <% end %>
 
         <div class="navbar-header">
           <%= link_to "CLASSROOM DASHBOARD", root_path, class: "navbar-brand" %>
         </div>
-
-        <ul class="nav navbar-nav navbar-right">
-          <!-- deleted user sign in check (see above)  -->
-          <% if admin_signed_in? %>
-            <li><%= link_to "ADD COURSE SECTION", new_section_path %></li>
-          <% end %>
-
-        </ul>
       </div>
     </nav>
 
