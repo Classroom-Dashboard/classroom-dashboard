@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   # nested routes so student always belongs to section
   resources :sections do
   resources :students

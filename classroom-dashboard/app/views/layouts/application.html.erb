@@ -14,31 +14,33 @@
 
       <div class="container">
 
+        <ul class="nav navbar-nav">
+          <% if admin_signed_in? %>
+            <li><%= link_to "SIGN OUT", destroy_admin_session_path, method: :delete %></li>
+          <% else %>
+            <li><%=link_to "SIGN UP", new_admin_registration_path %></li>
+            <li><%= link_to "LOGIN", new_admin_session_path%></li>
+          <% end %>
+        </ul>
+
         <div class="navbar-header">
           <%= link_to "CLASSROOM DASHBOARD", root_path, class: "navbar-brand" %>
         </div>
 
-        <ul class="nav navbar-nav">
-          <li><%=link_to "Sign Up", new_user_registration_path %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Log In", new_user_registration_path%></li>
-          <% end %>
-        </ul>
-
-
         <ul class="nav navbar-nav navbar-right">
           <!-- deleted user sign in check (see above)  -->
-            <li><%= link_to "Add Course Section", new_section_path %></li>
+          <% if admin_signed_in? %>
+            <li><%= link_to "ADD COURSE SECTION", new_section_path %></li>
+          <% end %>
+
         </ul>
       </div>
     </nav>
 
-    <!-- Will give us notice if login/logout was sucessful or not -->
+    <!-- Will give us notice if login/logout was sucessful or not
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
+    -->
     <%= yield %>
   </body>
 </html>

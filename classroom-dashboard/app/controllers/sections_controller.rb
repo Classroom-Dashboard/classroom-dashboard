@@ -11,7 +11,7 @@ class SectionsController < ApplicationController
   end
 
   def new
-    @section = Section.new
+    @section = current_admin.sections.build
   end
 
   def edit
@@ -40,7 +40,8 @@ class SectionsController < ApplicationController
   end
 
   def create
-    @section = Section.new(section_params)
+    @section = current_admin.sections.build(section_params)
+
     if @section.save
       redirect_to root_path
     else
