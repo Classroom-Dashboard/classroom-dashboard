@@ -8,7 +8,7 @@ This tool takes advantage of the technology that is often brought into lectures:
 
 ### Add Section
 
-Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters. 
+  Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters. 
 
 #### Student List
 
