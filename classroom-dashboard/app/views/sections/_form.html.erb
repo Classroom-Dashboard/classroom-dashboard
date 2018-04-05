@@ -9,9 +9,5 @@
 <%= simple_form_for @section do |f| %>
 	<%= f.input :course, label: "Course (ex: CS5)" %>
 	<%= f.input :semester, label: "Semester (ex:S2018)" %>
-	<!-- covered in semester? -->
-	<!-- <%= f.input :year %> -->
-	<!-- professor should eventually be collected through professor login -->
-	<!-- <%= f.input :professor, label: "Professor(s)" %> -->
 	<%= f.button :submit %>
 <% end %>

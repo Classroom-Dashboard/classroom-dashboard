@@ -34,4 +34,8 @@
   <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
 </div>
 
-<%= render @section.students.all.order("lastname ASC") %>
+<% @section.students.each do |student|%>
+<% if student != nil then %>
+<%= render student %>
+<% end %>
+<% end %>

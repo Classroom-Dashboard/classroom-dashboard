@@ -34,8 +34,8 @@
   <% if @student != nil then %>
   <%= image_tag @student.student_img.url(:student_index) %>
   <br>
-  <%= link_to @student.firstName, section_student_path(@student.section_id, @student) %>
-  <%= link_to @student.lastname, section_student_path(@student.section_id, @student) %>
+  <%= @student.firstName%>
+  <%= @student.lastname %>
   <% end %>
 
 
