@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
-    # calls new from upload controller for dropzone 
+    # calls new from upload controller for dropzone
     @upload = Upload.new
   end
 
@@ -18,7 +18,6 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
-    @student.firstName = @student.student_img_file_name
     @student.section_id = @section.id
 
     if @student.save
