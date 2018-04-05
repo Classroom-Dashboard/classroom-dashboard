@@ -8,10 +8,21 @@ This tool takes advantage of the technology that is often brought into lectures:
 
 ### Add Section
 
+Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters. 
+
 #### Student List
 
+Display all students within a class, each as a link to a personal student page containing all information. 
+
 ##### Add Student
+
+Add a new student with image, name, pronoun, school, and other parameters. 
+
 ##### Update / Delete Student
+
+From the Student List page, click on a student to update or delete. 
 
 
 #### Random Student
+
+Generates random student for cold-calling purposes. The generated student links to student's personal page. 
