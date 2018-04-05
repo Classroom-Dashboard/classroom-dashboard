@@ -1,0 +1,17 @@
+<h1> Flashcards </h1>
+<br>
+<br>
+<br>
+<br>
+
+<div style="text-align:center">
+  <% @student =  @section.students.all.order("RANDOM()").limit(1)[0] %>
+  <%= image_tag @student.student_img.url(:student_index) %>
+<br>
+  <%= @student.firstName%>
+  <%= @student.lastname%>
+
+
+</div>
+
+<h3 style="text-align: center"><%= link_to "Generate Random Student!", section_flashcards_path(@section)%></h3>
