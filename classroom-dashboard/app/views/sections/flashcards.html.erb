@@ -17,8 +17,13 @@
   }
 </script>
 
+<!-- Display section information -->
+<h1>
+    <%= @section.course %>
+    <%= @section.semester %>
+</h1>
 
-<h1> Flashcards </h1>
+<h1> Random Student </h1>
 <br>
 <br>
 <br>
@@ -26,10 +31,12 @@
 
 <div style="text-align:center">
   <% @student =  @section.students.all.order("RANDOM()").limit(1)[0] %>
+  <% if @student != nil then %>
   <%= image_tag @student.student_img.url(:student_index) %>
-<br>
-  <%= @student.firstName%>
-  <%= @student.lastname%>
+  <br>
+  <%= link_to @student.firstName, section_student_path(@student.section_id, @student) %>
+  <%= link_to @student.lastname, section_student_path(@student.section_id, @student) %>
+  <% end %>
 
 
 </div>

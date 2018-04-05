@@ -21,10 +21,14 @@
 </script>
 
 
-
+<!-- Display section information -->
+<h1>
+    <%= @section.course %>
+    <%= @section.semester %>
+</h1>
 
 <!-- student list page at section/:section_id/students -->
-<h1 class = students_header>Students</h1>
+<h1 class = students_header>Student List</h1>
 
 <div style="text-align:center">
   <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
