@@ -20,6 +20,7 @@ class SectionsController < ApplicationController
 
   # TODO: re-implement random flashcards (currently works by reloading page)
   def flashcards
+    @students = Section.find(params[:id]).students.all.order("RANDOM()")
   end
 
   def quiz

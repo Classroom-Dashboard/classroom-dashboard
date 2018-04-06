@@ -8,10 +8,6 @@
 
 		<div class="navbar-header">
       <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
-      <!-- <h1>
-          <%= @section.course %>
-          <%= @section.semester %>
-      </h1> -->
     </div>
 
 		<ul class="nav navbar-nav navbar-right">
@@ -24,16 +20,65 @@
 
 <h1> Random Student </h1>
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <% @student =  @section.students.all.order("RANDOM()").limit(1)[0] %>
   <% if @student != nil then %>
   <%= image_tag @student.student_img.url(:student_index) %>
   <br>
   <%= @student.firstName%>
   <%= @student.lastname %>
-  <% end %>
-
+  <% end %> -->
 
 </div>
 
-<h3 style="text-align: center"><%= link_to "Generate Random Student!", section_flashcards_path(@section)%></h3>
+<h3 style="text-align: center"> Up Now:
+<div id="up-now" style="text-align: center">
+</div>
+</h3>
+
+<br>
+
+<h4 style="text-align: center">Up Next:
+<div id="up-next" style="text-align: center; size:200px">
+</h4>
+
+<br>
+
+<div id="next-button">
+<button onClick="next()" style="text-align: center;"> Random Student
+</button>
+</div>
+
+<script>
+	var student_list = <%= @section.students.all.order("RANDOM()").to_json.html_safe %>;
+	var n = <%= @section.students.all.length %>;
+	var i = 0;
+	$("#up-now").html(student_list[i].firstName);
+	$("#up-now").append(" ");
+	$("#up-now").append(student_list[i].lastname);
+	$("#up-next").html(student_list[i+1].firstName);
+	$("#up-next").append(" ");
+	$("#up-next").append(student_list[i+1].lastname);
+
+	function next() {
+		if (i < n-1) {
+			i = i + 1;
+		} else {
+			i = 0;
+			// reached the end, re-randomize
+			student_list = student_list.sort(function(a, b){return 0.5 - Math.random()});
+		}
+		$("#up-now").html(student_list[i].firstName);
+		$("#up-now").append(" ");
+		$("#up-now").append(student_list[i].lastname);
+		if (i == n-1) {
+			$("#up-next").html(student_list[0].firstName);
+			$("#up-next").append(" ");
+			$("#up-next").append(student_list[0].lastname);
+		} else {
+			$("#up-next").html(student_list[i+1].firstName);
+			$("#up-next").append(" ");
+			$("#up-next").append(student_list[i+1].lastname);
+		}
+	}
+</script>

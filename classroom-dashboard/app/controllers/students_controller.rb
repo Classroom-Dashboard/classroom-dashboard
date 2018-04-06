@@ -45,7 +45,7 @@ class StudentsController < ApplicationController
   private
 
     def student_params
-      params.permit(:image, :student_img, :firstName, :lastname, :pronouns, :info, :school)
+      params.require(:student).permit(:image, :student_img, :firstName, :lastname, :pronouns, :info, :school)
     end
 
     # finds a student's id

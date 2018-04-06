@@ -13,7 +13,6 @@
 //=require rails-ujs
 //=require jquery
 //=require jquery_ujs
-//=require jquery-fileupload
 //=require dropzone
 //=require bootstrap-sprockets
 //=require turbolinks
