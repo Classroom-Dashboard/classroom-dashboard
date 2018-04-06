@@ -7,13 +7,14 @@
 
 
 <%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
-  <!-- paperclip -->
-  <%= f.file_field :student_img, multiple: true, name: "student[student_img]" %>
-  
+  <!-- paperclip -->  
   <%= f.input :firstName,  required: true, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>
   <%= f.input :pronouns, label: "Pronouns"%>
   <%= f.input :school, label: "School"%>
   <%= f.input :info, label: "Additional Info" %>
+  <%= f.file_field :student_img, label: "Upload Image", multiple: true, name: "student[student_img]" %>
+  <br>
   <%= f.button :submit %>
+
 <% end %>
