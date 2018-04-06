@@ -26,7 +26,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300');
-
+@import "compass";
 
 body{
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
@@ -195,7 +195,7 @@ div.style_alien img {
     margin-left: auto;
     margin-right: auto;
     max-height:100%;
-    bottom: 20%;
+    bottom: 10%;
     left: 0;
     right: 0;
     position: absolute;
@@ -207,8 +207,8 @@ div.style_alien_signup img {
     display: block;
     margin-left: auto;
     max-height:100%;
-    bottom: 10%;
-    left: 7%;
+    bottom: 7%;
+    right: 55%;
     position: absolute;
 }
 
@@ -218,8 +218,8 @@ div.style_alien_login img {
   display: block;
   margin-right: auto;
   max-height:100%;
-  bottom: 15%;
-  right: 20%;
+  bottom: 5%;
+  right: 53%;
   position: absolute;
 }
 
@@ -229,6 +229,32 @@ div.style_alien_navbar img {
     display: block;
     margin-right: auto;
 }
+
+/* Homepage Alien speech bubble */
+div.homepage_speechbubble img {
+  width: 450px;
+  height: auto;
+  left: 4%;
+
+}
+
+/* SignUp page speech bubble */
+div.choochoo_signup img {
+  width: 375px;
+  height: auto;
+  left: 1%;
+  bottom: 45;
+  position: absolute;
+}
+
+div.seatbelt-login img{
+  width: 350px;
+  height: auto;
+  bottom: 30%;
+  right: 72%;
+  position: absolute;
+}
+
 
 div.form-inputs {
   color:white;
@@ -311,4 +337,30 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+}
+
+/******************/
+/* STARS */
+/******************/
+.stars {
+  transform:perspective(500px);
+  transform-style:preserve-3d;
+  position:absolute;
+  bottom:50%;
+  perspective-origin:50% 100%;
+  left:50%;
+  animation:rotate 90s infinite linear;
+}
+
+.star {
+  width:2px;
+  height:2px;
+  background:#F7F7B6;
+  //border-radius:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  transform-origin:0 0 -300px;
+  transform:translate3d(0,0,-300px);
+  backface-visibility:hidden;
 }
