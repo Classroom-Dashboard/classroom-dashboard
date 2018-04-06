@@ -31,7 +31,7 @@
 	<% @section.each do |section| %>
 	  <% if section != nil then %>
 	    <tr>
-	      <td><h3 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section)%></h3></td>
+	      <td><%= link_to section.course + " " + section.semester, section_path(section)%></td>
 	      <td><%= link_to "Edit/Delete Section", edit_section_path(section) %></td>
 	    </tr>
 	  <% end %>
