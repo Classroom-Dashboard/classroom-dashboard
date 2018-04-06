@@ -16,12 +16,12 @@
           <ul class="nav navbar-nav navbar-right">
             <!-- deleted user sign in check (see above)  -->
             <li><%= link_to "SIGN OUT", destroy_admin_session_path, method: :delete %></li>
-
-            <ul class="nav navbar-nav navbar-left">
-              <li><%= link_to "MY SECTIONS", root_path, class: "navbar-brand"%></li>
-            </ul>
-
           </ul>
+
+          <ul class="nav navbar-nav navbar-left">
+            <li><%= link_to "MY SECTIONS", root_path, class: "navbar-brand"%></li>
+          </ul>
+
         <% else %>
           <ul class="nav navbar-nav">
             <li><%=link_to "SIGN UP", new_admin_registration_path %></li>

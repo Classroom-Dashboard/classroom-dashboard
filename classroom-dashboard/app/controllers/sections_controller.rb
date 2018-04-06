@@ -1,7 +1,7 @@
 class SectionsController < ApplicationController
 
   # Find the section ID before any other action
-  before_action :find_section, only: [:show, :edit, :update, :destroy, :flashcards]
+  before_action :find_section, only: [:show, :edit, :update, :destroy, :flashcards, :quiz]
 
   def index
     @section = Section.all.order("semester DESC")
@@ -20,6 +20,9 @@ class SectionsController < ApplicationController
 
   # TODO: re-implement random flashcards (currently works by reloading page)
   def flashcards
+  end
+
+  def quiz
   end
 
 
