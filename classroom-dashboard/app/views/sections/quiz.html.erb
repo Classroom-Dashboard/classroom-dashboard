@@ -1,29 +1,26 @@
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
-  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-  <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
-</div>
+<nav class="navbar navbar-default">
+	<div class="container">
 
-<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <ul class="nav navbar-nav navbar-left">
+      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
+    </ul>
 
+		<div class="navbar-header">
+      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
+      <!-- <h1>
+          <%= @section.course %>
+          <%= @section.semester %>
+      </h1> -->
+    </div>
 
-<script>
-  function openNav() {
-      document.getElementById("mySidenav").style.width = "200px";
-  }
-
-  function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-  }
-</script>
-
-
-<!-- Display section information -->
-<h1>
-    <%= @section.course %>
-    <%= @section.semester %>
-</h1>
+		<ul class="nav navbar-nav navbar-right">
+      <div style="text-align:right">
+        <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
+      </div>
+    </ul>
+	</div>
+</nav>
 
 <h1> Memory Game </h1>
 
@@ -55,6 +52,3 @@ function reveal() {
     }
 }
 </script>
-
-
-
