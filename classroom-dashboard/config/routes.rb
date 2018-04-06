@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'sections/:id/flashcards', to: "sections#flashcards", as: :section_flashcards
 
+  get 'sections/:id/quiz', to: "sections#quiz", as: :section_quiz
+
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
 end
