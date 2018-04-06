@@ -1,0 +1,60 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
+  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+  <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
+</div>
+
+<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "200px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+
+<!-- Display section information -->
+<h1>
+    <%= @section.course %>
+    <%= @section.semester %>
+</h1>
+
+<h1> Memory Game </h1>
+
+<div style="text-align:center">
+  <% @student =  @section.students.all.order("RANDOM()").limit(1)[0] %>
+  <% if @student != nil then %>
+  	<%= image_tag @student.student_img.url(:student_index) %>
+  <% end %>
+
+
+  	<br>
+  	<br>
+	<button onclick="reveal()">Reveal Name</button>
+	<br>
+	<div id="myDIV", style="display:none;", style="center">
+	  <%= @student.firstName %>
+	  <%= @student.lastname %>
+	</div>
+</div>
+
+
+<script>
+function reveal() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+
