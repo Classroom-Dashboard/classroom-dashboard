@@ -1,52 +1,41 @@
 <!-- Content that is displayed when a Section is clicked on -->
 <!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
+<nav class="navbar navbar-default">
+	<div class="container">
 
+    <ul class="nav navbar-nav navbar-left">
+      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
+    </ul>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
-  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-  <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
-</div>
+		<div class="navbar-header">
+      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
+      <!-- <h1>
+          <%= @section.course %>
+          <%= @section.semester %>
+      </h1> -->
+    </div>
 
-<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-
-<script>
-  function openNav() {
-      document.getElementById("mySidenav").style.width = "200px";
-  }
-
-  function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-  }
-</script>
+		<ul class="nav navbar-nav navbar-right">
+      <div style="text-align:right">
+        <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
+      </div>
+    </ul>
+	</div>
+</nav>
 
 
 <!-- Display section information -->
-<h1>
-    <%= @section.course %>
-    <%= @section.semester %>
-</h1>
+
 
 <!-- Ability to add a student to a section -->
 <div style="text-align:center">
-  <!--<p class = student_list_link><%= link_to "Student List", section_students_path(@section)%> </p>-->
-    <!-- Display a random student -->
-    <!--<p class = flashcards_link><%= link_to "Flashcards", section_flashcards_path(@section)%> </p>-->
-
-    <!-- List all of the students in this section -->
-
-    <!-- Functionality to edit the fields/info of a Section and delete the entire Section -->
     <p class = edit_section_link><%= link_to "Edit/Delete Section", edit_section_path(@section)%></p>
 </div></p>
 
-<div style="text-align:right">
-  <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
-</div>
 
 
-<table class="a">
+<table>
   <tr>
     <th>Students</th>
     <th></th>

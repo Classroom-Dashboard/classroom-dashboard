@@ -2,9 +2,22 @@
 
 <!-- List each section and a link to that section's info and it's student list -->
 <% if admin_signed_in? %>
+<nav class="navbar navbar-default">
+	<div class="container">
+
+		<div class="navbar-header">
+			<%= link_to "Sections", root_path, class: "navbar-brand" %>
+		</div>
+
+		<ul class="nav navbar-nav navbar-right">
+			<h5 class = add_new_section><%= link_to "Add Course Section", new_section_path %></h5>
+		</ul>
+	</div>
+</nav>
+
+
+
 	<br>
-	<h1 class = students_header>Sections</h1>
-	<h5 class = add_new_section><%= link_to "Add Course Section", new_section_path %></h5>
 	<br>
 	<br>
 

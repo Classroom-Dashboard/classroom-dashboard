@@ -49,6 +49,8 @@ body{
 	border-color:transparent;
 	background-image:none;
 	box-shadow:none;
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 /* Classroom Dashboard */
@@ -59,6 +61,8 @@ body{
     font-size: 25px;
     display: inline-block;
     float: none;
+    text-align: center;
+
 
     /* Centers name in navbar */
     transform: translateX(-50%);
@@ -122,6 +126,13 @@ h1.edit_student {
 
 /* student > index.html.erb */
 h1.students_header {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  font-size: 700;
+}
+
+h1.sections_header {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
   color: white;
@@ -313,13 +324,19 @@ p {
 }
 
 
-th,td {
-    border: 1px;
-    font-family: 'Work Sans', sans-serif;
-    color: white;
+table {
+  font-family: 'Work Sans', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-table.a {
-    table-layout: auto;
-    width: 180px;
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: black !important;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
