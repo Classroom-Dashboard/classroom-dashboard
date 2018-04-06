@@ -264,13 +264,15 @@ p.add_student {
   font-family: 'Work Sans', sans-serif;
 }
 
+
+
 /******************/
 /* Homepage links */
 /******************/
 
 // changed to black for dropzone removelink, temporary solution to focus on functionality for now
 a, a:hover, a:active, a:visited {
-    color: white;
+    color: black;
 }
 
 p {
@@ -279,49 +281,9 @@ p {
 
 
 
-
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #551a8b;
-    display: block;
-    transition: 0.3s;
-    font-family: 'Work Sans', sans-serif;
-
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
+/******************/
+/* Table links */
+/******************/
 
 table {
   font-family: 'Work Sans', sans-serif;
@@ -333,11 +295,12 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-    color: black !important;
+    color: white;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
+    color: white;
 }
 
 hr {

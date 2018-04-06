@@ -5,20 +5,27 @@
 
     <ul class="nav navbar-nav navbar-left">
       <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
       <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
     </ul>
 
 		<div class="navbar-header">
       <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
-      <!-- <h1>
-          <%= @section.course %>
-          <%= @section.semester %>
-      </h1> -->
     </div>
 
 		<ul class="nav navbar-nav navbar-right">
       <div style="text-align:right">
-        <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
+        <a href="#"><%= link_to "Student List", section_path%></a>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
       </div>
     </ul>
 	</div>
