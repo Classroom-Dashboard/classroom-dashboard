@@ -2,12 +2,14 @@
 
 
 <!-- dropzone  -->
-<!-- <%= form_for @upload, html: { multipart: true, class: "dropzone", id: "my-dropzone" } do |f| %>
+<!-- <%= form_for [@section, @section.students.build], html: { multipart: true, class: "dropzone", id: "my-dropzone" } do |f| %>
 <% end %> -->
+
 
 <%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
   <!-- paperclip -->
-  <%= f.file_field :student_img %>
+  <%= f.file_field :student_img, multiple: true, name: "student[student_img]" %>
+  
   <%= f.input :firstName,  required: true, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>
   <%= f.input :pronouns, label: "Pronouns"%>

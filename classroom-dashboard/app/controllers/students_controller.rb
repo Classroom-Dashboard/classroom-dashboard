@@ -9,8 +9,6 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
-    # calls new from upload controller for dropzone
-    @upload = Upload.new
   end
 
   def show
