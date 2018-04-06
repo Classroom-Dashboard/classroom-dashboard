@@ -6,7 +6,7 @@
     <h1 class = edit_section_info Edit Section </h1>
 
     <%= render 'form' %>
-    <h5><%= link_to "Cancel", section_path(@section) %></h5>
+    <h5><%= link_to "Cancel", root_path %></h5>
 
     <h5 class = delete_section_link><%= link_to "DELETE THIS SECTION", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %></h5>
 

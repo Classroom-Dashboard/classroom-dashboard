@@ -50,7 +50,6 @@ body{
 	background-image:none;
 	box-shadow:none;
   font-family: 'Work Sans', sans-serif;
-
 }
 
 /* Classroom Dashboard */
@@ -339,4 +338,14 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+hr {
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }
