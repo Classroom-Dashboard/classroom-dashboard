@@ -36,8 +36,10 @@
 	<button onclick="reveal()">Reveal Name</button>
 	<br>
 	<div id="myDIV", style="display:none;", style="center">
-	  <%= @student.firstName %>
-	  <%= @student.lastname %>
+		<% if @student != nil then %>
+	  	<%= @student.firstName %>
+	  	<%= @student.lastname %>
+		<% end %>
 	</div>
 </div>
 

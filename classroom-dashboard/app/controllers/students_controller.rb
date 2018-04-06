@@ -9,8 +9,6 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
-    # calls new from upload controller for dropzone
-    @upload = Upload.new
   end
 
   def show
@@ -47,7 +45,7 @@ class StudentsController < ApplicationController
   private
 
     def student_params
-      params.require(:student).permit(:image, :student_img, :firstName, :lastname, :pronouns, :info, :school)
+      params.permit(:image, :student_img, :firstName, :lastname, :pronouns, :info, :school)
     end
 
     # finds a student's id

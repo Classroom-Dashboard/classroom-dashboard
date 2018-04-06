@@ -42,15 +42,18 @@
     <th></th>
   </tr>
 
+<% if @section.students.length != 0 %>
 <% @section.students.each do |student|%>
   <% if student != nil then %>
     <tr>
       <td><%= image_tag student.student_img.url(:student_index)%></td>
-      <td><%= link_to student.firstName + " " + student.lastname, section_student_path(student.section_id, student) %></td>
+      <td><%= link_to student.firstName, section_student_path(student.section_id, student) %></td>
       <td><%= link_to "Edit/Delete", edit_section_student_path(student.section_id, student) %></td>
     </tr>
   <% end %>
 <% end %>
+<% end %>
+
 </table>
 
 <br>
