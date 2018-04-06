@@ -1,19 +1,21 @@
+<div class="col-md-6 col-md-offset-3">
 
+  <h1 class = edit_student> Edit Student </h1>
 
-<h1 class = edit_student> Edit Student </h1>
+  <!-- loads in form to edit student  -->
+  <%= simple_form_for([@section, @student]) do |f|%>
+  <%= f.file_field :student_img %>
+  <%= f.input :firstName, label: "First Name" %>
+  <%= f.input :lastname, label: "Last Name" %>
+  <%= f.input :pronouns, label: "Pronouns"%>
+  <%= f.input :school, label: "School"%>
+  <%= f.input :info, label: "Additional Info" %>
+  <%= f.button :submit %>
+  <% end %>
 
-<!-- loads in form to edit student  -->
-<%= simple_form_for([@section, @student]) do |f|%>
-<%= f.file_field :student_img %>
-<%= f.input :firstName, label: "First Name" %>
-<%= f.input :lastname, label: "Last Name" %>
-<%= f.input :pronouns, label: "Pronouns"%>
-<%= f.input :school, label: "School"%>
-<%= f.input :info, label: "Additional Info" %>
-<%= f.button :submit %>
-<% end %>
+  <!-- link back to student page  -->
+  <h5><%= link_to "Cancel", section_path(@section)%></h5>
 
-<!-- link back to student page  -->
-<h5><%= link_to "Cancel", section_student_path(@student.section_id, @student)%></h5>
+  <h5><%= link_to "DELETE", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%></h5>
 
-<%= link_to "DELETE", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%>
+</div>

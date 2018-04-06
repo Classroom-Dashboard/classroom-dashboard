@@ -31,7 +31,6 @@ class StudentsController < ApplicationController
   end
 
   def update
-
     if @student.update(student_params)
       redirect_to section_students_path(@section)
     else
