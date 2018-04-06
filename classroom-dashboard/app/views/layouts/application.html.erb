@@ -16,6 +16,11 @@
           <ul class="nav navbar-nav navbar-right">
             <!-- deleted user sign in check (see above)  -->
             <li><%= link_to "SIGN OUT", destroy_admin_session_path, method: :delete %></li>
+
+            <ul class="nav navbar-nav navbar-left">
+              <li><%= link_to "MY SECTIONS", root_path, class: "navbar-brand"%></li>
+            </ul>
+
           </ul>
         <% else %>
           <ul class="nav navbar-nav">
@@ -24,9 +29,6 @@
           </ul>
         <% end %>
 
-        <ul class="nav navbar-nav navbar-left">
-          <li><%= link_to "MY SECTIONS", root_path, class: "navbar-brand"%></li>
-        </ul>
         <div class="navbar-header">
           <%= link_to "CLASSROOM DASHBOARD", root_path, class: "navbar-brand" %>
         </div>
