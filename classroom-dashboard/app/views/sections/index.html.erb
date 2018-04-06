@@ -2,11 +2,16 @@
 
 <!-- List each section and a link to that section's info and it's student list -->
 
-<br>
-<h1 class = students_header>Sections</h1>
-<br>
-<br>
+
 <% if admin_signed_in? %>
+	<br>
+	<h1 class = students_header>Sections</h1>
+	<h5 class = add_new_section><%= link_to "Add Course Section", new_section_path %></h5>
+	<br>
+	<br>
+
+	          <!-- deleted user sign in check (see above)  -->
+
 	<% @section.each do |section| %>
 		<h3 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section) %></h3>
 	<% end %>
