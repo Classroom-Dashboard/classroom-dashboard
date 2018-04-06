@@ -1,22 +1,45 @@
 <!-- HOMEPAGE -->
 
 <!-- List each section and a link to that section's info and it's student list -->
-
-
 <% if admin_signed_in? %>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
+	<a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+</div>
+
+
+
+<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<h5 class = back_to_course><%= link_to "Back to Course", section_path(@section)%></h5>
+
+
+<script>
+	function openNav() {
+			document.getElementById("mySidenav").style.width = "200px";
+	}
+
+	function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+	}
+</script>
+
 	<br>
 	<h1 class = students_header>Sections</h1>
 	<h5 class = add_new_section><%= link_to "Add Course Section", new_section_path %></h5>
 	<br>
 	<br>
 
-	          <!-- deleted user sign in check (see above)  -->
-
 	<% @section.each do |section| %>
 		<h3 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section) %></h3>
 	<% end %>
-<% end %>
 
-<div class="style_alien">
-	<%= image_tag("alien.png", :alt => "rss feed") %>
-</div>
+
+<% else %>
+
+	<div class="style_alien">
+		<%= image_tag("alien.png", :alt => "rss feed") %>
+	</div>
+
+<% end %>

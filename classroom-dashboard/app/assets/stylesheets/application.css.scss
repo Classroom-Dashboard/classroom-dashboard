@@ -311,3 +311,15 @@ p {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+th,td {
+    border: 1px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+}
+
+table.a {
+    table-layout: auto;
+    width: 180px;
+}
