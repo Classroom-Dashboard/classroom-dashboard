@@ -32,18 +32,19 @@
 
 
 
-<div style="text-align:center">
+<div class="student_info">
   <%= image_tag @student.student_img.url(:student_index) %>
   <br>
   <%= @student.firstName %>
   <%= @student.lastname %>
+	<br>
   <br>
-  <%= @student.pronouns %>
+  <%= "Pronouns: " + @student.pronouns %>
   <br>
-  <%= @student.school %>
+  <%= "School: " + @student.school %>
   <br>
-  <%= @student.info %>
+  <%= "Notes: " + @student.info %>
   <br>
-
+	<br>
   <%= link_to "Edit/Delete", edit_section_student_path %>
 </div>
