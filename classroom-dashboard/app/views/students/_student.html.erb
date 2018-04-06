@@ -1,28 +1,8 @@
-<!-- <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#"><%= link_to "Student List", section_students_path(@section)%></a>
-  <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-</div>
-
-<span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-
-<script>
-  function openNav() {
-      document.getElementById("mySidenav").style.width = "200px";
-  }
-
-  function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-  }
-</script> -->
-
 <!-- loaded in calls to render @student for randomization and student list-->
 
 <div class="col-md-3">
     <%= image_tag student.student_img.url(:student_index) %>
     <br>
-    <%= link_to student.firstName, section_student_path(student.section_id, student) %>
-    <%= link_to student.lastname, section_student_path(student.section_id, student) %>
+    <%= link_to student.firstName + " " + student.lastname, section_student_path(student.section_id, student) %>
 
 </div>
