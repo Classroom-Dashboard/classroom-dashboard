@@ -21,9 +21,28 @@
 	<br>
 	<br>
 
+
+	<table>
+	  <tr>
+	    <th>Sections</th>
+	    <th></th>
+	  </tr>
+
 	<% @section.each do |section| %>
-		<h3 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section) %></h3>
+	  <% if section != nil then %>
+	    <tr>
+	      <td><h3 class = link_to_section><%= link_to section.course + " " + section.semester, section_path(section)%></h3></td>
+	      <td><%= link_to "Edit/Delete Section", edit_section_path(section) %></td>
+	    </tr>
+	  <% end %>
 	<% end %>
+	</table>
+
+
+	<!-- <div style="text-align:center">
+	    <p class = edit_section_link><%= link_to "Edit/Delete Section", edit_section_path(@section)%></p>
+	</div></p> -->
+
 
 
 <% else %>
