@@ -26,7 +26,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300');
-
+@import "compass";
 
 body{
     background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
@@ -50,7 +50,6 @@ body{
 	background-image:none;
 	box-shadow:none;
   font-family: 'Work Sans', sans-serif;
-
 }
 
 /* Classroom Dashboard */
@@ -196,7 +195,7 @@ div.style_alien img {
     margin-left: auto;
     margin-right: auto;
     max-height:100%;
-    bottom: 20%;
+    bottom: 10%;
     left: 0;
     right: 0;
     position: absolute;
@@ -208,8 +207,8 @@ div.style_alien_signup img {
     display: block;
     margin-left: auto;
     max-height:100%;
-    bottom: 10%;
-    left: 7%;
+    bottom: 7%;
+    right: 55%;
     position: absolute;
 }
 
@@ -219,8 +218,8 @@ div.style_alien_login img {
   display: block;
   margin-right: auto;
   max-height:100%;
-  bottom: 15%;
-  right: 20%;
+  bottom: 5%;
+  right: 53%;
   position: absolute;
 }
 
@@ -230,6 +229,32 @@ div.style_alien_navbar img {
     display: block;
     margin-right: auto;
 }
+
+/* Homepage Alien speech bubble */
+div.homepage_speechbubble img {
+  width: 450px;
+  height: auto;
+  left: 4%;
+
+}
+
+/* SignUp page speech bubble */
+div.choochoo_signup img {
+  width: 375px;
+  height: auto;
+  left: 1%;
+  bottom: 45;
+  position: absolute;
+}
+
+div.seatbelt-login img{
+  width: 350px;
+  height: auto;
+  bottom: 30%;
+  right: 72%;
+  position: absolute;
+}
+
 
 div.form-inputs {
   color:white;
@@ -265,13 +290,15 @@ p.add_student {
   font-family: 'Work Sans', sans-serif;
 }
 
+
+
 /******************/
 /* Homepage links */
 /******************/
 
 // changed to black for dropzone removelink, temporary solution to focus on functionality for now
 a, a:hover, a:active, a:visited {
-    color: white;
+    color: black;
 }
 
 p {
@@ -280,49 +307,9 @@ p {
 
 
 
-
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #551a8b;
-    display: block;
-    transition: 0.3s;
-    font-family: 'Work Sans', sans-serif;
-
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
+/******************/
+/* Table links */
+/******************/
 
 table {
   font-family: 'Work Sans', sans-serif;
@@ -334,11 +321,12 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-    color: black !important;
+    color: white;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
+    color: white;
 }
 
 // flashcards page
@@ -355,4 +343,40 @@ tr:nth-child(even) {
 
 #next-button {
   text-align: center;
+}
+
+hr {
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+/******************/
+/* STARS */
+/******************/
+.stars {
+  transform:perspective(500px);
+  transform-style:preserve-3d;
+  position:absolute;
+  bottom:50%;
+  perspective-origin:50% 100%;
+  left:50%;
+  animation:rotate 90s infinite linear;
+}
+
+.star {
+  width:2px;
+  height:2px;
+  background:#F7F7B6;
+  //border-radius:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  transform-origin:0 0 -300px;
+  transform:translate3d(0,0,-300px);
+  backface-visibility:hidden;
 }

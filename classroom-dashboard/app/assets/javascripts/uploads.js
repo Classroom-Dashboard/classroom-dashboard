@@ -1,8 +1,13 @@
 $(function (){
-    Dropzone.autoDiscover = false;
-
+    Dropzone.autoDiscover = false,
+    
 
     $("#my-dropzone").dropzone({
+        autoProcessQueue: false,
+        uploadMultiple: true,
+        parallelUploads: 100,
+        maxFiles: 100,
+
         maxFilesize: 2,
         addRemoveLinks: true, //shows remove links in image thumbnail
         paramName: 'upload[image]',

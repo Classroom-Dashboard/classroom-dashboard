@@ -3,6 +3,11 @@
 
     <ul class="nav navbar-nav navbar-left">
       <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
       <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
     </ul>
 
@@ -12,34 +17,31 @@
 
 		<ul class="nav navbar-nav navbar-right">
       <div style="text-align:right">
-        <p class = add_student><%= link_to "Add Student", new_section_student_path(@section)%></p>
+        <a href="#"><%= link_to "Student List", section_path%></a>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
       </div>
     </ul>
 	</div>
 </nav>
 
-<h1> Random Student </h1>
-
-<!-- <div style="text-align:center">
-  <% @student =  @section.students.all.order("RANDOM()").limit(1)[0] %>
-  <% if @student != nil then %>
-  <%= image_tag @student.student_img.url(:student_index) %>
-  <br>
-  <%= @student.firstName%>
-  <%= @student.lastname %>
-  <% end %> -->
-
-</div>
+<br>
+<h1> Flashcards </h1>
+<br>
+<br>
 
 <h3 style="text-align: center"> Up Now:
-<div id="up-now" style="text-align: center">
-</div>
+<div id="up-now" style="text-align: center"></div>
 </h3>
 
 <br>
 
 <h4 style="text-align: center">Up Next:
-<div id="up-next" style="text-align: center; size:200px">
+  <div id="up-next" style="text-align: center; size:200px"></div>
 </h4>
 
 <br>
@@ -82,3 +84,5 @@
 		}
 	}
 </script>
+  <% end %>
+</div>
