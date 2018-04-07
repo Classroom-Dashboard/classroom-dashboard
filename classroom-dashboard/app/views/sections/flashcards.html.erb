@@ -47,11 +47,17 @@
 <br>
 
 <div id="next-button">
-<button onClick="next()" style="text-align: center;"> Random Student
+<button onClick="next()" onkeypress="next()" style="text-align: center;"> Random Student
 </button>
 </div>
 
 <script>
+	$(document).keydown(function(e) {
+		if (e.keyCode == 39) {
+			next();
+		};
+	});
+
 	var student_list = <%= @section.students.all.order("RANDOM()").to_json.html_safe %>;
 	var n = <%= @section.students.all.length %>;
 	var i = 0;

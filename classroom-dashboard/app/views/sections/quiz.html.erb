@@ -58,6 +58,12 @@
 
 
 <script>
+$(document).keydown(function(e) {
+	if (e.keyCode == 32) {
+		reveal();
+	};
+});
+
 function reveal() {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
