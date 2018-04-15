@@ -47,8 +47,6 @@
 	  <% if student != nil then %>
 	    <tr>
 	      <td><%= link_to image_tag(student.student_img.url(:student_index)), section_student_path(student.section_id, student)%></td>
-	      <td><%= link_to student.firstName + " " + student.lastname, section_student_path(student.section_id, student) %></td>
-				<td><%= student.school %></td>
 	      <td><%= link_to "Edit/Delete", edit_section_student_path(student.section_id, student) %></td>
 	    </tr>
 	  <% end %>

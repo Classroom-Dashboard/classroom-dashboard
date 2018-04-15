@@ -13,9 +13,9 @@
 //=require rails-ujs
 //=require jquery
 //=require jquery_ujs
-//=require dropzone
+//=require jquery-fileupload/basic
 //=require bootstrap-sprockets
-//=require turbolinks
+//=require dropzone
 //=require_tree .
 
 $(document).ready(function(){

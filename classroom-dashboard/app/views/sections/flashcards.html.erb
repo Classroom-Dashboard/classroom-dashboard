@@ -29,10 +29,13 @@
 	</div>
 </nav>
 
-<br>
 <h1> Flashcards </h1>
-<br>
-<br>
+
+<div id="next-button">
+<button onClick="next()" onkeypress="next()" style="text-align: center;"> Next!
+</button>
+</div>
+
 
 <h3 style="text-align: center"> Up Now:
 <div id="up-now" style="text-align: center"></div>
@@ -46,12 +49,9 @@
 
 <br>
 
-<div id="next-button">
-<button onClick="next()" onkeypress="next()" style="text-align: center;"> Random Student
-</button>
-</div>
 
 <script>
+
 	$(document).keydown(function(e) {
 		if (e.keyCode == 39) {
 			next();
@@ -61,12 +61,12 @@
 	var student_list = <%= @section.students.all.order("RANDOM()").to_json.html_safe %>;
 	var n = <%= @section.students.all.length %>;
 	var i = 0;
-	$("#up-now").html(student_list[i].firstName);
-	$("#up-now").append(" ");
-	$("#up-now").append(student_list[i].lastname);
-	$("#up-next").html(student_list[i+1].firstName);
-	$("#up-next").append(" ");
-	$("#up-next").append(student_list[i+1].lastname);
+
+	// initialize page
+	upnow(i);
+	if (n > 1) {
+		upnext(i+1);
+	}
 
 	function next() {
 		if (i < n-1) {
@@ -76,17 +76,41 @@
 			// reached the end, re-randomize
 			student_list = student_list.sort(function(a, b){return 0.5 - Math.random()});
 		}
-		$("#up-now").html(student_list[i].firstName);
+		upnow(i);
+		if (i == n-1) {
+			// display nothing when new list about to be generated
+			// TODO: better solution
+			$("#up-next").html("");
+		} else {
+			upnext(i+1);
+		}
+	};
+
+	// renders student i in #up-now div
+	function upnow(i) {
+		$("#up-now").html("<br>");
+		// account for ID digits in image url
+		if (student_list[i].id >= 100) {
+			$("#up-now").append('<img src="/system/students/student_imgs/000/000/' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+		}
+		if (student_list[i].id >= 10) {
+			$("#up-now").append('<img src="/system/students/student_imgs/000/000/0' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+		}
+		else {
+			$("#up-now").append('<img src="/system/students/student_imgs/000/000/00' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+		}
+		$("#up-now").append("<br> <br>");
+		$("#up-now").append(student_list[i].firstName);
 		$("#up-now").append(" ");
 		$("#up-now").append(student_list[i].lastname);
-		if (i == n-1) {
-			$("#up-next").html(student_list[0].firstName);
-			$("#up-next").append(" ");
-			$("#up-next").append(student_list[0].lastname);
-		} else {
-			$("#up-next").html(student_list[i+1].firstName);
-			$("#up-next").append(" ");
-			$("#up-next").append(student_list[i+1].lastname);
-		}
+	};
+
+	// renders student i in #up-next div
+	function upnext(i) {
+		$("#up-next").html("<br>");
+		$("#up-next").append(student_list[i].firstName);
+		$("#up-next").append(" ");
+		$("#up-next").append(student_list[i].lastname);
 	}
+
 </script>

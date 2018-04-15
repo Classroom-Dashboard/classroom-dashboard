@@ -6,7 +6,7 @@
 <% end %> -->
 
 
-<%= simple_form_for([@section, @section.students.build], :html => { :multipart => true }) do |f|%>
+<%= simple_form_for [@section, @section.students.build], html: { multipart: true} do |f|%>
   <!-- paperclip -->
   <%= f.input :firstName,  required: true, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>
@@ -14,7 +14,5 @@
   <%= f.input :school, label: "School", as: :select, collection: ['HMC', 'SCR', 'CMC ', 'POM', 'PZ']%>
   <%= f.input :info, label: "Additional Info" %>
   <%= f.file_field :student_img, label: "Upload Image", multiple: true, name: "student[student_img]" %>
-  <br>
-  <%= f.button :submit %>
-
+  <%= f.submit %>
 <% end %>
