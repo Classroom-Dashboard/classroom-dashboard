@@ -18,11 +18,11 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id])
   end
 
-  # TODO: re-implement random flashcards (currently works by reloading page)
+  # only needs section passed in, handled in before_action
   def flashcards
-    @students = Section.find(params[:id]).students.all.order("RANDOM()")
   end
 
+  # only needs section passed in, handled in before_action
   def quiz
   end
 

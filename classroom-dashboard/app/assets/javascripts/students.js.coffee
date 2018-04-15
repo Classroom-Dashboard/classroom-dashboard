@@ -1,2 +1,2 @@
-jQuery ->
-  $('#new_student').fileupload()
+$ ->
+  $('#new_section_student').fileupload()
