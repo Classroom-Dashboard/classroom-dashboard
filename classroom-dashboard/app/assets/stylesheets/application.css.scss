@@ -256,16 +256,6 @@ div.seatbelt-login img{
   position: absolute;
 }
 
-/* Alien in Flashcards page*/
-div.style_alien_flashcards img{
-  width: 180px;
-  height: auto;
-  bottom: 10%;
-  left: 2%;
-  position: absolute;
-
-}
-
 /* Cilantro Mascot on Homepage */
 div.cilantro img{
   width: 50px;
@@ -273,7 +263,27 @@ div.cilantro img{
   top: 0%;
   left: 3%;
   position: absolute;
+}
 
+/*********************/
+/* Flashcard html page */
+/*********************/
+
+/* Alien in Flashcards page*/
+div.style_alien_flashcards img{
+  width: 180px;
+  height: auto;
+  bottom: 10%;
+  left: 2%;
+  position: absolute;
+}
+
+div.flashcard_responses img{
+  width: 400px;
+  height: auto;
+  bottom: 38%;
+  left: 10%;
+  position: absolute;
 }
 
 
