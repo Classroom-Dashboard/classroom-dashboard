@@ -1,26 +1,23 @@
 <!-- HOMEPAGE -->
 
-<!-- List each section and a link to that section's info and it's student list -->
 <% if admin_signed_in? %>
-<nav class="navbar navbar-default">
-	<div class="container">
+<!-- List each section and a link to that section's info and it's student list -->
+	<nav class="navbar navbar-default">
+		<div class="container">
 
-		<div class="navbar-header">
-			<%= link_to "Sections", root_path, class: "navbar-brand" %>
+			<div class="navbar-header">
+				<%= link_to "Sections", root_path, class: "navbar-brand" %>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<h5 class = add_new_section><%= link_to "Add Course Section", new_section_path %></h5>
+			</ul>
 		</div>
-
-		<ul class="nav navbar-nav navbar-right">
-			<h5 class = add_new_section><%= link_to "Add Course Section", new_section_path %></h5>
-		</ul>
-	</div>
-</nav>
-
-
+	</nav>
 
 	<br>
 	<br>
 	<br>
-
 
 	<table>
 	  <tr>
@@ -29,14 +26,16 @@
 	  </tr>
 
 	<% @section.each do |section| %>
-	  <% if section != nil then %>
-	    <tr>
-	      <td><%= link_to section.course + " " + section.semester, section_path(section)%></td>
-	      <td><%= link_to "Edit/Delete Section", edit_section_path(section) %></td>
-	    </tr>
-	  <% end %>
-	<% end %>
+		 <% if section != nil then %>
+			    <tr>
+			      <td><%= link_to section.course + " " + section.semester, section_path(section)%></td>
+			      <td><%= link_to "Edit/Delete Section", edit_section_path(section) %></td>
+			    </tr>
+			 <% end %>
+		 <% end %>
 	</table>
+
+
 
 
 	<!-- <div style="text-align:center">
@@ -50,7 +49,7 @@
 	<div class="style_alien">
 		<%= image_tag("alien.png", :alt => "rss feed") %>
 	</div>
-	
+
 	<div class="homepage_speechbubble">
 		<%= image_tag("homepage-speech-bubble.png", :alt => "rss feed") %>
 	</div>
