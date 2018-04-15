@@ -88,6 +88,10 @@ function reveal() {
 
 
 function next() {
+	var x = document.getElementById("name");
+	if (x.style.display === "block") {
+			x.style.display = "none";
+	};
 	if (i < n-1) {
 		i = i + 1;
 	} else {
