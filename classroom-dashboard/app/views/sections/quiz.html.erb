@@ -33,27 +33,18 @@
 <h1> Memory Game </h1>
 <br>
 
-
-
-<h3 style="text-align: center"><%= link_to "Generate Random Student!", section_quiz_path(@section)%></h3>
-
 <div style="text-align:center">
   <button onclick="reveal()">Reveal/Hide Name</button>
-  <br>
-  <br>
+	<button onclick="next()">Next Student</button>
 
-  <% @student =  @section.students.all.order("RANDOM()").limit(1)[0] %>
-  <% if @student != nil then %>
-  	<%= image_tag @student.student_img.url(:student_index) %>
-  <% end %>
+  <br>
+  <br>
 
 	<br>
-	<div id="myDIV", style="display:none;", style="center">
-		<% if @student != nil then %>
-	  	<%= @student.firstName %>
-	  	<%= @student.lastname %>
-		<% end %>
-	</div>
+
+	<div id="image" style="center"></div>
+
+	<div id="name" style="display:none;" style="center"></div>
 </div>
 
 
@@ -64,12 +55,47 @@ $(document).keydown(function(e) {
 	};
 });
 
+var student_list = <%= @section.students.all.order("RANDOM()").to_json.html_safe %>;
+var n = <%= @section.students.all.length %>;
+var i = 0;
+
+render_student(i);
+
+// renders student i in #up-now div
+function render_student(i) {
+	$("#name").html(student_list[i].firstName + " " + student_list[i].lastname);
+	$("#image").html("<br>");
+	// account for ID digits in image url
+	if (student_list[i].id >= 100) {
+		$("#image").append('<img src="/system/students/student_imgs/000/000/' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+	}
+	if (student_list[i].id >= 10) {
+		$("#image").append('<img src="/system/students/student_imgs/000/000/0' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+	}
+	else {
+		$("#image").append('<img src="/system/students/student_imgs/000/000/00' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+	}
+};
+
 function reveal() {
-    var x = document.getElementById("myDIV");
+    var x = document.getElementById("name");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
     }
-}
+};
+
+
+function next() {
+	if (i < n-1) {
+		i = i + 1;
+	} else {
+		i = 0;
+		// reached the end, re-randomize
+		student_list = student_list.sort(function(a, b){return 0.5 - Math.random()});
+	}
+	render_student(i);
+};
+
 </script>
