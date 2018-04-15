@@ -1,55 +1,61 @@
 <!-- Content that is displayed when a Section is clicked on -->
 <!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
-<nav class="navbar navbar-default">
-	<div class="container">
+<% if admin_signed_in? %>
+	<% if current_admin.id == @section.admin_id %>
 
-    <ul class="nav navbar-nav navbar-left">
-      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
-    </ul>
+		<nav class="navbar navbar-default">
+			<div class="container">
 
-		<div class="navbar-header">
-      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
-    </div>
+		    <ul class="nav navbar-nav navbar-left">
+		      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+		      &nbsp;
+		      &nbsp;
+		      &nbsp;
+		      &nbsp;
+		      &nbsp;
+		      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
+		    </ul>
 
-		<ul class="nav navbar-nav navbar-right">
-      <div style="text-align:right">
-        <a href="#"><%= link_to "Student List", section_path%></a>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
-      </div>
-    </ul>
-	</div>
-</nav>
+				<div class="navbar-header">
+		      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
+		    </div>
+
+				<ul class="nav navbar-nav navbar-right">
+		      <div style="text-align:right">
+		        <a href="#"><%= link_to "Student List", section_path%></a>
+		        &nbsp;
+		        &nbsp;
+		        &nbsp;
+		        &nbsp;
+		        &nbsp;
+		        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
+		      </div>
+		    </ul>
+			</div>
+		</nav>
 
 
 <!-- Display student information -->
+		<table>
+		  <tr>
+		    <th>Students</th>
+		    <th></th>
+		    <th></th>
+				<th></th>
+		  </tr>
 
-<table>
-  <tr>
-    <th>Students</th>
-    <th></th>
-    <th></th>
-		<th></th>
-  </tr>
-
-<% if @section.students.length != 0 %>
-	<% @section.students.each do |student|%>
-	  <% if student != nil then %>
-	    <tr>
-	      <td><%= link_to image_tag(student.student_img.url(:student_index)), section_student_path(student.section_id, student)%></td>
-	      <td><%= link_to "Edit/Delete", edit_section_student_path(student.section_id, student) %></td>
-	    </tr>
-	  <% end %>
+			<% if @section.students.length != 0 %>
+				<% @section.students.each do |student|%>
+				  <% if student != nil then %>
+				    <tr>
+				      <td><%= link_to image_tag(student.student_img.url(:student_index)), section_student_path(student.section_id, student)%></td>
+				      <td><%= link_to student.firstName + " " + student.lastname, section_student_path(student.section_id, student) %></td>
+							<td><%= student.school %></td>
+				      <td><%= link_to "Edit/Delete", edit_section_student_path(student.section_id, student) %></td>
+				    </tr>
+					<% end %>
+				<% end %>
+			<% end %>
 	<% end %>
 <% end %>
 

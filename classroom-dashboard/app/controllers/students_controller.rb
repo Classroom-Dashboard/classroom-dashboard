@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
-  before_action :find_student, only: [:edit, :show, :update, :destroy]
   before_action :find_section
+  before_action :find_student, only: [:edit, :show, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit]
 
 
   def index
@@ -17,6 +18,8 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     @student.section_id = @section.id
+    @student.admin_id = current_admin.id
+
 
     if @student.save
       redirect_to section_path(@section)

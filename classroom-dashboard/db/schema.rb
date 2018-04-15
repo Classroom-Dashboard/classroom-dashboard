@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405064904) do
+ActiveRecord::Schema.define(version: 20180415055203) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20180405064904) do
     t.integer "course_id"
     t.integer "section_id"
     t.string "school"
+    t.integer "admin_id"
   end
 
   create_table "uploads", force: :cascade do |t|
