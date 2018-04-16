@@ -2,6 +2,8 @@ class SectionsController < ApplicationController
 
   # Find the section ID before any other action
   before_action :find_section, only: [:show, :edit, :update, :destroy, :flashcards, :quiz]
+  before_action :authenticate_admin!, only: [:new, :edit]
+
 
   def index
     @section = Section.all.order("semester DESC")
@@ -12,20 +14,26 @@ class SectionsController < ApplicationController
 
   def new
     @section = current_admin.sections.build
+    # @section = Section.new
+    # @section.admin_id = current_admin.id
+  end
+
+  def create
+    @section = current_admin.sections.build(section_params)
+    # @section = Section.new(section_params)
+    # @section.admin_id = current_admin.id
+
+    if @section.save
+      redirect_to root_path
+    else
+      # Display form to input fields for new Section
+      render 'new'
+    end
   end
 
   def edit
     @section = Section.find(params[:id])
   end
-
-  # only needs section passed in, handled in before_action
-  def flashcards
-  end
-
-  # only needs section passed in, handled in before_action
-  def quiz
-  end
-
 
   def update
     # If Section is updated successfully
@@ -42,16 +50,15 @@ class SectionsController < ApplicationController
       redirect_to root_path
   end
 
-  def create
-    @section = current_admin.sections.build(section_params)
-
-    if @section.save
-      redirect_to root_path
-    else
-      # Display form to input fields for new Section
-      render 'new'
-    end
+  # only needs section passed in, handled in before_action
+  def flashcards
   end
+
+  # only needs section passed in, handled in before_action
+  def quiz
+  end
+
+
 
   private
 
