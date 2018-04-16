@@ -1,31 +1,31 @@
 <nav class="navbar navbar-default">
 	<div class="container">
 
-    <ul class="nav navbar-nav navbar-left">
-      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
-    </ul>
+	    <ul class="nav navbar-nav navbar-left">
+	      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+	      &nbsp;
+	      &nbsp;
+	      &nbsp;
+	      &nbsp;
+	      &nbsp;
+	      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
+	    </ul>
 
-		<div class="navbar-header">
-      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
-    </div>
+		  <div class="navbar-header">
+	      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
+	    </div>
 
-		<ul class="nav navbar-nav navbar-right">
-      <div style="text-align:right">
-        <a href="#"><%= link_to "Student List", section_path%></a>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
-      </div>
-    </ul>
+			<ul class="nav navbar-nav navbar-right">
+	      <div style="text-align:right">
+	        <a href="#"><%= link_to "Student List", section_path(@section)%></a>
+	        &nbsp;
+	        &nbsp;
+	        &nbsp;
+	        &nbsp;
+	        &nbsp;
+	        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
+	      </div>
+	    </ul>
 	</div>
 </nav>
 
@@ -34,17 +34,10 @@
 <br>
 
 <div style="text-align:center">
-  <button onclick="reveal()">Reveal/Hide Name</button>
-	<button onclick="next()">Next Student</button>
-
   <br>
   <br>
-
-	<br>
-
-	<div id="image" style="center"></div>
-
-	<div id="name" style="display:none;" style="center"></div>
+  <div id="image" style="center"></div>
+  <div id="name" style="display:none;" style="center"></div>
 </div>
 
 
@@ -52,6 +45,8 @@
 $(document).keydown(function(e) {
 	if (e.keyCode == 32) {
 		reveal();
+	} else if (e.keyCode == 39) {
+		next();
 	};
 });
 

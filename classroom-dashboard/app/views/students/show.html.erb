@@ -18,7 +18,7 @@
 
 		<ul class="nav navbar-nav navbar-right">
       <div style="text-align:right">
-        <a href="#"><%= link_to "Student List", section_path%></a>
+        <a href="#"><%= link_to "Student List", section_path(@section)%></a>
         &nbsp;
         &nbsp;
         &nbsp;
@@ -30,17 +30,18 @@
 	</div>
 </nav>
 
-
-
 <div class="student_info">
   <%= image_tag @student.student_img.url(:student_index) %>
   <br>
   <%= @student.firstName %>
   <%= @student.lastname %>
 	<br>
+  <%= @student.pronouns %>
   <br>
-
+  <%= @student.school %>
   <br>
-	<br>
+  <%= @student.info %>
+  <br>
+  <br>
   <%= link_to "Edit/Delete", edit_section_student_path %>
 </div>
