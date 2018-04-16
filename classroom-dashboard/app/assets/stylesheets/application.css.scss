@@ -29,9 +29,7 @@
 @import "compass";
 
 body{
-    background:radial-gradient(220% 105% at top center, rgb(155, 84, 202) 10%
-    ,rgb(169, 122, 226)
-    40%,rgba(218, 145, 218, 0.822),rgb(162, 104, 179));
+    background:white;
     background-attachment: fixed;
     word-wrap: break-word;
     font-size: 16px;
@@ -55,13 +53,13 @@ body{
 /* Classroom Dashboard */
 .navbar-header {
     a {
-    color: white !important;
+    /* S.P.A.M. & Sections */
+    color: black !important;
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 45px;
     display: inline-block;
     float: none;
     text-align: center;
-
 
     /* Centers name in navbar */
     transform: translateX(-50%);
@@ -72,11 +70,11 @@ body{
 
 /* Add Course Section */
 .navbar-nav a {
-  color: white !important;
+  /* Rest of header titles */
+  color: black !important;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
 }
-
 
 /***************/
 /* Header tags */
@@ -85,7 +83,7 @@ body{
 h1 {
     text-align: center;
     font-family: 'Work Sans', sans-serif;
-    color: white;
+    color: black;
     font-size: 700;
 }
 
@@ -93,7 +91,7 @@ h1 {
 h1.edit_section_info {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   font-size: 700;
 }
 
@@ -103,7 +101,7 @@ h3.link_to_section {
   left: 70%;
   top: 40%;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   font-size: 300;
 }
 
@@ -111,7 +109,7 @@ h3.link_to_section {
 h1.create_new_section {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   font-size: 700;
 }
 
@@ -119,7 +117,7 @@ h1.create_new_section {
 h1.edit_student {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   font-size: 700;
 }
 
@@ -127,28 +125,28 @@ h1.edit_student {
 h1.students_header {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   font-size: 700;
 }
 
 h1.sections_header {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   font-size: 700;
 }
 
 h2.login_link {
   font-family: 'Work Sans', sans-serif;
   font-size: 700;
-  color: white;
+  color: black;
   text-align: center;
 }
 
 h2.signup_link {
   font-family: 'Work Sans', sans-serif;
   font-size: 700;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -165,14 +163,14 @@ h2.random_student_link {
 
 h5.add_new_section {
     text-align: center;
-    color:white;
+    color:black;
     font-family: 'Work Sans', sans-serif;
 }
 
 /* students > new.html.erb */
 h3.add_new_student {
     text-align: center;
-    color:white;
+    color:black;
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -228,6 +226,16 @@ div.style_alien_navbar img {
     max-width:3%;
     display: block;
     margin-right: auto;
+}
+
+/* cilantro on top nav bar */
+div.cilantro-navbar img{
+  width: 75px;
+  height: auto;
+  top: 1%;
+  left: 2%;
+  position: absolute;
+
 }
 
 /* Homepage Alien speech bubble */
@@ -286,24 +294,15 @@ div.flashcard_responses img{
   position: absolute;
 }
 
-div.cilantro-flashcards img{
-  width: 50px;
-  height: auto;
-  top: 0%;
-  left: 2%;
-  position: absolute;
-
-}
-
 div.form-inputs {
-  color:white;
+  color:black;
   font-family: 'Work Sans', sans-serif;
 }
 
 div.student_info {
   text-align:center;
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: black;
   left: 70%;
 }
 
@@ -367,7 +366,8 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-    color: white;
+    color: black;
+    font-size: 125%;
 }
 
 tr:nth-child(even) {

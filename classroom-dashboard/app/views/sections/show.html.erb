@@ -1,5 +1,6 @@
 <!-- Content that is displayed when a Section is clicked on -->
 <!-- show's section's attributes, students, add student functionality, and edit/delete course functionality -->
+
 <% if admin_signed_in? %>
 	<% if current_admin.id == @section.admin_id %>
 
@@ -57,5 +58,4 @@
 			<% end %>
 	<% end %>
 <% end %>
-
 </table>

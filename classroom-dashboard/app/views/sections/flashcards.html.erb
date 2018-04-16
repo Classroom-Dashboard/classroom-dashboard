@@ -1,39 +1,39 @@
 <nav class="navbar navbar-default">
 	<div class="container">
 
-    <ul class="nav navbar-nav navbar-left">
-      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
-    </ul>
+	    <ul class="nav navbar-nav navbar-left">
+	      <a href="#"><%= link_to "Flashcards", section_flashcards_path(@section)%></a>
+	      &nbsp;
+	      &nbsp;
+	      &nbsp;
+	      &nbsp;
+	      &nbsp;
+	      <a href="#"><%= link_to "Memory Game", section_quiz_path(@section)%></a>
+	    </ul>
 
-		<div class="navbar-header">
-      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
-    </div>
+		  <div class="navbar-header">
+	      <%= link_to @section.course + " " + @section.semester, section_path, class: "navbar-brand" %>
+	    </div>
 
-		<ul class="nav navbar-nav navbar-right">
-      <div style="text-align:right">
-        <a href="#"><%= link_to "Student List", section_path%></a>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
-      </div>
-    </ul>
+			<ul class="nav navbar-nav navbar-right">
+	      <div style="text-align:right">
+	        <a href="#"><%= link_to "Student List", section_path(@section)%></a>
+	        &nbsp;
+	        &nbsp;
+	        &nbsp;
+	        &nbsp;
+	        &nbsp;
+	        <a href="#"><%= link_to "Add Student", new_section_student_path(@section)%></a>
+	      </div>
+	    </ul>
 	</div>
 </nav>
 
 <h1> Flashcards </h1>
 
 <div id="next-button">
-<button onClick="next()" onkeypress="next()" style="text-align: center;"> Next!
-</button>
+<!-- <button onClick="next()" onkeypress="next()" style="text-align: center;"> Next!
+</button> -->
 </div>
 
 
@@ -46,11 +46,6 @@
 <h4 style="text-align: center">Up Next:
   <div id="up-next" style="text-align: center; size:200px"></div>
 </h4>
-
-<div class="cilantro-flashcards">
-	<%= image_tag("cilantro.png", :alt => "rss feed") %>
-	<%= link_to image_tag("cilantro.png"), "https://giphy.com/gifs/spam-xdnytp8742kg0/fullscreen" %>
-</div>
 
 <div class="style_alien_flashcards">
   <%= image_tag("alien.png", :alt => "rss feed") %>
