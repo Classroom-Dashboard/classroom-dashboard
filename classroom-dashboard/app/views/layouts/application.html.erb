@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Classroom Dashboard</title>
+    <title>S.P.A.M.</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,9 @@
   </head>
 
   <body>
+    <br>
 
+    <!-- top navbar -->
     <nav class="navbar navbar-default">
       <div class="container">
         <% if admin_signed_in? %>
@@ -34,7 +36,16 @@
         </div>
       </div>
     </nav>
-    <hr>
+
+    <!-- cilantro logo -->
+    <div class="cilantro-navbar">
+      <%= image_tag("cilantro.png", :alt => "rss feed") %>
+      <%= link_to image_tag("cilantro.png"), "https://giphy.com/gifs/spam-xdnytp8742kg0/fullscreen" %>
+    </div>
+
+    <!-- horizontal line -->
+    <hr style="height:11px;background-color:purple">
+    <br>
 
     <%= yield %>
   </body>
