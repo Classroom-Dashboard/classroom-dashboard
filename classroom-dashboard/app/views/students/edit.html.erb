@@ -10,6 +10,7 @@
   <%= f.input :school, label: "School", as: :select, collection: ['HMC', 'SCR', 'CMC ', 'POM', 'PZ']%>
   <%= f.input :info, label: "Additional Info" %>
   <%= f.file_field :student_img, label: "Upload Image", multiple: true, name: "student[student_img]" %>
+    
   <br>
   <%= f.button :submit %>
   <% end %>
@@ -20,3 +21,10 @@
   <h5><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, section_student_path, method: :delete, data: {confirm: "Are you sure?"}%></h5>
 
 </div>
+
+
+            
+               
+                
+        
+
