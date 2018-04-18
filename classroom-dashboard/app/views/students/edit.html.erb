@@ -16,6 +16,6 @@
   <!-- link back to student page  -->
   <h5><%= link_to "Cancel", section_path(@section)%></h5>
 
-  <h5><%= link_to "DELETE", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%></h5>
+  <h5><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, section_student_path, method: :delete, data: {confirm: "Are you sure?"}%></h5>
 
 </div>

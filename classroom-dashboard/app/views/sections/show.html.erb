@@ -37,10 +37,14 @@
 
 <!-- Display student information -->
 		<table>
+			<col width="30%">
+			<col width="45%">
+			<col width="18%">
+			<col width="8%">
 		  <tr>
-		    <th>Students</th>
 		    <th></th>
-		    <th></th>
+		    <th>Name</th>
+		    <th>School</th>
 				<th></th>
 		  </tr>
 
@@ -51,7 +55,8 @@
 				      <td><%= link_to image_tag(student.student_img.url(:student_index)), section_student_path(student.section_id, student)%></td>
 				      <td><%= link_to student.firstName + " " + student.lastname, section_student_path(student.section_id, student) %></td>
 							<td><%= student.school %></td>
-				      <td><%= link_to "Edit/Delete", edit_section_student_path(student.section_id, student) %></td>
+				      <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path(student.section_id, student) %></td>
+
 				    </tr>
 					<% end %>
 				<% end %>

@@ -56,7 +56,7 @@ body{
     /* S.P.A.M. & Sections */
     color: black !important;
     font-family: 'Montserrat', sans-serif;
-    font-size: 45px;
+    font-size: 40px;
     display: inline-block;
     float: none;
     text-align: center;
@@ -399,7 +399,9 @@ a.memory_game_button:hover {
 table {
   font-family: 'Work Sans', sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
+
 }
 
 td, th {

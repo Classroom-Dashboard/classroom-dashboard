@@ -8,7 +8,7 @@
     <%= render 'form' %>
     <h5><%= link_to "Cancel", root_path %></h5>
 
-    <h5 class = delete_section_link><%= link_to "DELETE THIS SECTION", section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %></h5>
+    <h5 class = delete_section_link><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %></h5>
 
   </div>
 
