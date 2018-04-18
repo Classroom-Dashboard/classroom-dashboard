@@ -4,18 +4,19 @@
 
   <!-- loads in form to edit student  -->
   <%= simple_form_for([@section, @student]) do |f|%>
-  <%= f.file_field :student_img %>
   <%= f.input :firstName, label: "First Name" %>
   <%= f.input :lastname, label: "Last Name" %>
   <%= f.input :pronouns, label: "Pronouns"%>
   <%= f.input :school, label: "School", as: :select, collection: ['HMC', 'SCR', 'CMC ', 'POM', 'PZ']%>
   <%= f.input :info, label: "Additional Info" %>
+  <%= f.file_field :student_img, label: "Upload Image", multiple: true, name: "student[student_img]" %>
+  <br>
   <%= f.button :submit %>
   <% end %>
 
   <!-- link back to student page  -->
   <h5><%= link_to "Cancel", section_path(@section)%></h5>
 
-  <h5><%= link_to "DELETE", section_student_path, method: :delete, data: {confirm: "Are you sure?"}%></h5>
+  <h5><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, section_student_path, method: :delete, data: {confirm: "Are you sure?"}%></h5>
 
 </div>
