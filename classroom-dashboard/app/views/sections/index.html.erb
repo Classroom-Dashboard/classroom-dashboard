@@ -1,6 +1,7 @@
 <!-- HOMEPAGE -->
 
 <% if admin_signed_in? %>
+
 <!-- List each section and a link to that section's info and it's student list -->
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -25,6 +26,7 @@
 	    <th></th>
 	  </tr>
 
+
 	<% @section.each do |section| %>
 		 <% if section != nil then %>
 			    <tr>
@@ -34,6 +36,7 @@
 			 <% end %>
 		 <% end %>
 	</table>
+
 
 
 

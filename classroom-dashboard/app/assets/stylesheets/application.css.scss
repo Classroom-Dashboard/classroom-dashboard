@@ -342,8 +342,13 @@ p.add_student {
 /******************/
 
 // changed to black for dropzone removelink, temporary solution to focus on functionality for now
-a, a:hover, a:active, a:visited {
+a, a:active, a:visited {
     color: black;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: purple !important;
 }
 
 p {
@@ -351,6 +356,41 @@ p {
 }
 
 
+/*******************************/
+/* Flashcard/memory game links */
+/*******************************/
+
+a.flashcard_button {
+  margin: 0 auto;
+  background-color: purple;
+  color: white !important;
+  padding: 8px 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  }
+
+a.flashcard_button:hover {
+	background-color: white;
+	color: purple !important;
+}
+
+a.memory_game_button {
+  margin: 0 auto;
+  background-color: purple;
+  color: white !important;
+  padding: 8px 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  }
+
+a.memory_game_button:hover {
+	background-color: white;
+	color: purple !important;
+}
 
 /******************/
 /* Table links */
@@ -400,4 +440,3 @@ hr {
     border-style: inset;
     border-width: 1px;
 }
-
