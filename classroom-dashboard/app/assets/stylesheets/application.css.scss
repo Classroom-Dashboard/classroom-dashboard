@@ -394,18 +394,18 @@ div.edit_icon {
 
 /* Alien in Flashcards page*/
 div.style_alien_flashcards img{
-  width: 180px;
+  width: 100px;
   height: auto;
-  bottom: 10%;
+  bottom: 15%;
   left: 2%;
   position: absolute;
 }
 
 div.flashcard_responses img{
-  width: 400px;
+  width: 300px;
   height: auto;
-  bottom: 38%;
-  left: 10%;
+  bottom: 28%;
+  left: 7%;
   position: absolute;
 }
 
@@ -420,6 +420,42 @@ div.student_info {
   color: black;
   left: 70%;
 }
+
+div.style_alien_quiz img{
+  width: 80px;
+  height: auto;
+  bottom: 28%;
+  left: 22%;
+  position: absolute;
+}
+div.quiz-instructions img{
+  width: 300px;
+  height: auto;
+  bottom: 24;
+  left: 2%;
+  position: absolute;
+}
+
+/* Memory Game: Student Name */
+#name{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+}
+
+/* Flashcards: Student Up Next */
+
+
+h4{
+  font-size: 30px;
+  top: 375px;
+  right: 185px;
+  font-family: 'Work Sans', sans-serif;
+  position: absolute
+ 
+}
+
+
+
 
 /*********************/
 /* Paragraph classes */
