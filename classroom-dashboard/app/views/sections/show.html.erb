@@ -55,12 +55,26 @@
 				      <td><%= link_to image_tag(student.student_img.url(:student_index)), section_student_path(student.section_id, student)%></td>
 				      <td><%= link_to student.firstName + " " + student.lastname, section_student_path(student.section_id, student) %></td>
 							<td><%= student.school %></td>
-				      <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path(student.section_id, student) %></td>
+				      <td><center><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path(student.section_id, student) %></center></td>
 
 				    </tr>
 					<% end %>
 				<% end %>
 			<% end %>
+
+	<% else %>
+
+		<div class="error">
+			<h2>Whoops!</h2>
+			<br>
+			<h3>It looks like you don't have access to that page. The green alien will redirect you...</h3>
+		</div>
+
+		<div class="style_alien_error">
+			<%= image_tag("alien.png", :alt => "rss feed") %>
+			<%= link_to image_tag("alien.png"), root_path %>
+		</div>
+
 	<% end %>
 <% end %>
 </table>
