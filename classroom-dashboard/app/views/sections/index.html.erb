@@ -31,7 +31,7 @@
 		 <% if section != nil then %>
 			    <tr>
 			      <td><%= link_to section.course + " " + section.semester, section_path(section)%></td>
-			      <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_path(section) %></td>
+			      <td><center><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_path(section) %></center></td>
 			    </tr>
 			 <% end %>
 		 <% end %>
