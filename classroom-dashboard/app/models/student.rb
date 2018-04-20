@@ -6,7 +6,7 @@ class Student < ApplicationRecord
   validates_attachment_content_type :student_img, content_type: /\Aimage\/.*\z/
 
   # resizes all images prior to the scaling change to the correct dimensions
-  Student.all.each {|s| s.student_img.reprocess! }
+  # Student.all.each {|s| s.student_img.reprocess! }
   # makes server run slow so commented out for client-dev meeting ^
 
 end

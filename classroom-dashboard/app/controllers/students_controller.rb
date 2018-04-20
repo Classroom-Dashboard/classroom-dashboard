@@ -40,7 +40,7 @@ class StudentsController < ApplicationController
       @student.firstName = @student.student_img_file_name.split("_")[0]
       @student.lastname = @student.student_img_file_name.split("_")[1].split(".")[0]
     end
-    
+
     if @student.update(student_params)
       redirect_to section_path(@section)
     else
