@@ -25,7 +25,7 @@
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300,400,500');
 @import "compass";
 
 body{
@@ -133,6 +133,7 @@ h3.link_to_section {
   left: 70%;
   top: 40%;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   font-size: 300;
 }
@@ -141,6 +142,7 @@ h3.link_to_section {
 h1.create_new_section {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   font-size: 700;
 }
@@ -149,6 +151,7 @@ h1.create_new_section {
 h1.edit_student {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   font-size: 700;
 }
@@ -157,6 +160,7 @@ h1.edit_student {
 h1.students_header {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   font-size: 700;
 }
@@ -164,12 +168,14 @@ h1.students_header {
 h1.sections_header {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   font-size: 700;
 }
 
 h2.login_link {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   font-size: 700;
   color: black;
   text-align: center;
@@ -177,6 +183,7 @@ h2.login_link {
 
 h2.signup_link {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   font-size: 700;
   color: black;
   text-align: center;
@@ -186,6 +193,7 @@ h2.signup_link {
 h2.random_student_link {
     text-align: center;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
     position: fixed;
     top: 50%;
     left: 70%;
@@ -197,6 +205,7 @@ h5.add_new_section {
     text-align: center;
     color:black;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
 }
 
 /* students > new.html.erb */
@@ -204,12 +213,14 @@ h3.add_new_student {
     text-align: center;
     color:black;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
 }
 
 /* students > index.html.erb */
 h5.back_to_course {
     text-align: left;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
     margin-left: 25px
 }
 
@@ -373,6 +384,7 @@ div.cilantro img{
 div.error {
   text-align: left;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   max-width:70%;
   display: block;
@@ -412,11 +424,13 @@ div.flashcard_responses img{
 div.form-inputs {
   color:black;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 div.student_info {
   text-align:center;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   color: black;
   left: 70%;
 }
@@ -439,22 +453,30 @@ div.quiz-instructions img{
 /* Memory Game: Student Name */
 #name{
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   font-size: 40px;
 }
 
 /* Flashcards: Student Up Next */
 
 
-h4{
+h4 {
   font-size: 30px;
   top: 375px;
   right: 185px;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   position: absolute
- 
 }
 
 
+#up-now {
+  font-size: 40px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  left: 50%;
+  right: 50%;
+}
 
 
 /*********************/
@@ -464,26 +486,31 @@ h4{
 /* sections > show.html.erb */
 p.student_list_link {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 /* sections > show.html.erb */
 p.flashcards_link {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 /* sections > show.html.erb */
 p.edit_section_link {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 /* sections > show.html.erb */
 p.delete_section_link {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 /* students > index.html.erb */
 p.add_student {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 
@@ -504,6 +531,7 @@ a:hover{
 
 p {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 
@@ -549,6 +577,7 @@ a.memory_game_button:hover {
 
 table {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   border-collapse: collapse;
   width: 95%;
   margin: 0 auto;
@@ -572,13 +601,8 @@ tr:nth-child(even) {
 
 #up-next {
   text-align: center;
-  font-size: 80%;
 }
 
-#up-now {
-  text-align: center;
-  font-size: 25px;
-}
 
 #next-button {
   text-align: center;

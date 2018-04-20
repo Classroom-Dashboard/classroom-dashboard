@@ -42,7 +42,7 @@
 <br>
 
 <div style="text-align:center">
-  <div id="name" style="display:none;" style="center"></div>
+  <div id="name" style="visibility:hidden;" style="center"></div>
   <br>
   <br>
   <div id="image" style="center"></div>
@@ -67,6 +67,11 @@ render_student(i);
 
 // renders student i in #up-now div
 function render_student(i) {
+	// skip students without photos
+	if (student_list[i].student_img_file_name == null ) {
+		i = i+1;
+		render_student(i);
+	};
 	$("#name").html('<a href=/sections/' + student_list[i].section_id +'/students/' + student_list[i].id + '>' + student_list[i].firstName + " " + student_list[i].lastname+'</a>');
 	$("#image").html("<br>");
 	// account for ID digits in image url
@@ -83,18 +88,18 @@ function render_student(i) {
 
 function reveal() {
     var x = document.getElementById("name");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    if (x.style.visibility === "hidden") {
+        x.style.visibility = "visible";
     } else {
-        x.style.display = "none";
+        x.style.visibility = "hidden";
     }
 };
 
 
 function next() {
 	var x = document.getElementById("name");
-	if (x.style.display === "block") {
-			x.style.display = "none";
+	if (x.style.visibility === "visible") {
+			x.style.visibility = "hidden";
 	};
 	if (i < n-1) {
 		i = i + 1;

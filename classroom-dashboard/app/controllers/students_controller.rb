@@ -20,6 +20,10 @@ class StudentsController < ApplicationController
     @student.section_id = @section.id
     @student.admin_id = current_admin.id
 
+    if @student.firstName.empty? && @student.lastname.empty?
+      @student.firstName = @student.student_img_file_name.split("_")[0]
+      @student.lastname = @student.student_img_file_name.split("_")[1].split(".")[0]
+    end
 
     if @student.save
       redirect_to section_path(@section)
@@ -32,6 +36,11 @@ class StudentsController < ApplicationController
   end
 
   def update
+    if @student.firstName.empty? && @student.lastname.empty?
+      @student.firstName = @student.student_img_file_name.split("_")[0]
+      @student.lastname = @student.student_img_file_name.split("_")[1].split(".")[0]
+    end
+
     if @student.update(student_params)
       redirect_to section_path(@section)
     else
