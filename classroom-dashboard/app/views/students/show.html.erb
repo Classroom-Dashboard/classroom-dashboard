@@ -31,17 +31,17 @@
 </nav>
 
 <div class="student_info">
-  <%= image_tag @student.student_img.url(:student_index) %>
+  <%= image_tag @student.student_img.url(:student_show) %>
   <br>
-  <%= @student.firstName %>
-  <%= @student.lastname %>
-	<br>
-  <%= @student.pronouns %>
-  <br>
-  <%= @student.school %>
-  <br>
-  <%= @student.info %>
-  <br>
-  <br>
-  <%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path %>
+  <h1><%= @student.firstName %>
+  <%= @student.lastname %> </h1>
+	<div class="edit_icon">
+		<%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path %>
+	</div>
+	<p> Pronouns:
+  <%= @student.pronouns %> </p>
+	<p style="font-weight:bold;"> School:
+  <%= @student.school %> </p>
+	<p> Additional info:
+  <%= @student.info %></p>
 </div>

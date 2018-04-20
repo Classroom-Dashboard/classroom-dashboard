@@ -100,13 +100,13 @@
 		$("#up-now").html("<br>");
 		// account for ID digits in image url
 		if (student_list[i].id >= 100) {
-			$("#up-now").append('<img src="/system/students/student_imgs/000/000/' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+			$("#up-now").append('<img src="/system/students/student_imgs/000/000/' + student_list[i].id + '/student_show/' + student_list[i].student_img_file_name + '" />');
 		}
 		if (student_list[i].id >= 10) {
-			$("#up-now").append('<img src="/system/students/student_imgs/000/000/0' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+			$("#up-now").append('<img src="/system/students/student_imgs/000/000/0' + student_list[i].id + '/student_show/' + student_list[i].student_img_file_name + '" />');
 		}
 		else {
-			$("#up-now").append('<img src="/system/students/student_imgs/000/000/00' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+			$("#up-now").append('<img src="/system/students/student_imgs/000/000/00' + student_list[i].id + '/student_show/' + student_list[i].student_img_file_name + '" />');
 		}
 		$("#up-now").append("<br> <br>");
 		$("#up-now").append(student_list[i].firstName);
