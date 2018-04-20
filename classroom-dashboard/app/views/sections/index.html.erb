@@ -1,6 +1,6 @@
 <!-- HOMEPAGE -->
 
-<% if admin_signed_in? %>
+<% if admin_signed_in?  %>
 
 <!-- List each section and a link to that section's info and it's student list -->
 	<nav class="navbar navbar-default">
@@ -29,15 +29,17 @@
 
 	<% @section.each do |section| %>
 		 <% if section != nil then %>
+		  <% if current_admin.id == section.admin_id %>
 			    <tr>
 			      <td><%= link_to section.course + " " + section.semester, section_path(section)%></td>
 			      <td><center><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_path(section) %></center></td>
 			    </tr>
 			 <% end %>
 		 <% end %>
-	</table>
+		<% end %>
 
-<% else %>
+	</table>
+	<% else %>
 
 	<div class="style_alien">
 		<%= image_tag("alien.png", :alt => "rss feed") %>
@@ -50,4 +52,4 @@
 		<%= image_tag("cilantro.png", :alt => "rss feed") %>
 		<%= link_to image_tag("cilantro.png"), "https://giphy.com/gifs/spam-xdnytp8742kg0/fullscreen" %>
 	</div>
-<% end %>
+	<% end %>

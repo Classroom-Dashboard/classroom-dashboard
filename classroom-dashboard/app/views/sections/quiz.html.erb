@@ -56,19 +56,20 @@ var i = 0;
 
 render_student(i);
 
+
 // renders student i in #up-now div
 function render_student(i) {
-	$("#name").html(student_list[i].firstName + " " + student_list[i].lastname);
+	$("#name").html('<a href=/sections/' + student_list[i].section_id +'/students/' + student_list[i].id + '>' + student_list[i].firstName + " " + student_list[i].lastname+'</a>');
 	$("#image").html("<br>");
 	// account for ID digits in image url
 	if (student_list[i].id >= 100) {
-		$("#image").append('<img src="/system/students/student_imgs/000/000/' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+		$("#image").append('<a href=/sections/' + student_list[i].section_id +'/students/' + student_list[i].id + '><img src="/system/students/student_imgs/000/000/' + student_list[i].id + '/student_show/' + student_list[i].student_img_file_name + '" /></a>');
 	}
 	if (student_list[i].id >= 10) {
-		$("#image").append('<img src="/system/students/student_imgs/000/000/0' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+		$("#image").append('<a href=/sections/' + student_list[i].section_id +'/students/' + student_list[i].id + '><img src="/system/students/student_imgs/000/000/0' + student_list[i].id + '/student_show/' + student_list[i].student_img_file_name + '" /></a>');
 	}
 	else {
-		$("#image").append('<img src="/system/students/student_imgs/000/000/00' + student_list[i].id + '/student_index/' + student_list[i].student_img_file_name + '" />');
+		$("#image").append('<a href=/sections/' + student_list[i].section_id +'/students/' + student_list[i].id + '><img src="/system/students/student_imgs/000/000/00' + student_list[i].id + '/student_show/' + student_list[i].student_img_file_name + '" /></a>');
 	}
 };
 
