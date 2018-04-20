@@ -31,12 +31,6 @@
 </nav>
 
 <!-- <h1> Flashcards </h1> -->
-<br>
-<div id="next-button">
-<!-- <button onClick="next()" onkeypress="next()" style="text-align: center;"> Next!
-</button> -->
-</div>
-
 
 <h3 style="text-align: center"> Up Now:
 <div id="up-now" style="text-align: center"></div>
@@ -44,8 +38,10 @@
 
 <br>
 
-<h4> Up Next:
-  <div id="up-next" ></div>
+<h4 style="text-align: center">Up Next:	        &nbsp;
+
+	<button onClick="skip()"> skip </button>
+  <div id="up-next" style="text-align: center; size:200px"></div>
 </h4>
 
 <div class="style_alien_flashcards">
@@ -54,9 +50,8 @@
 
 <div class="flashcard_responses">
 		<%= image_tag("flashcard_responses.png", :alt => "rss feed") %>
-	</div>
+</div>
 
-<br>
 
 
 <script>
@@ -83,7 +78,9 @@
 		} else {
 			i = 0;
 			// reached the end, re-randomize
+			student_list = <%= @section.students.all.order("RANDOM()").to_json.html_safe %>;
 			student_list = student_list.sort(function(a, b){return 0.5 - Math.random()});
+			n = <%= @section.students.all.length %>;
 		}
 		upnow(i);
 		if (i == n-1) {
@@ -120,6 +117,16 @@
 		$("#up-next").append(student_list[i].firstName);
 		$("#up-next").append(" ");
 		$("#up-next").append(student_list[i].lastname);
-	}
+	};
+
+	function skip() {
+		if (i < n) {
+			student_list.splice(i+1,1);
+			n = n-1;
+		} else {
+			$("#up-next").html("");
+		}
+		upnext(i+1);
+	};
 
 </script>

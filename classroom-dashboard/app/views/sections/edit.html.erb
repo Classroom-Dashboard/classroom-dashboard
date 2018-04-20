@@ -1,15 +1,32 @@
 <!-- To edit Section fields, display form -->
 
-<div class="col-md-6 col-md-offset-3">
+<% if current_admin.id == @section.admin_id %>
 
-  <div class="new-section-form">
-    <h1 class = edit_section_info Edit Section </h1>
+  <div class="col-md-6 col-md-offset-3">
 
-    <%= render 'form' %>
-    <h5><%= link_to "Cancel", root_path %></h5>
+    <div class="new-section-form">
+      <h1 class = edit_section_info Edit Section </h1>
 
-    <h5 class = delete_section_link><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %></h5>
+      <%= render 'form' %>
+      <h5><%= link_to "Cancel", root_path %></h5>
+
+      <h5 class = delete_section_link><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, section_path(@section), method: :delete, data: {confirm: "Are you sure?"} %></h5>
+
+    </div>
 
   </div>
 
-</div>
+<% else %>
+
+  <div class="error">
+    <h2>Whoops!</h2>
+    <br>
+    <h3>It looks like you don't have access to that page. The green alien will redirect you...</h3>
+  </div>
+
+  <div class="style_alien_error">
+    <%= image_tag("alien.png", :alt => "rss feed") %>
+    <%= link_to image_tag("alien.png"), root_path %>
+  </div>
+
+<% end %>

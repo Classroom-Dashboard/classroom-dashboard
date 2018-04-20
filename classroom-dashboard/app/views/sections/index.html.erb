@@ -32,24 +32,26 @@
 		  <% if current_admin.id == section.admin_id %>
 			    <tr>
 			      <td><%= link_to section.course + " " + section.semester, section_path(section)%></td>
-			      <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_path(section) %></td>
+			      <td><center><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_path(section) %></center></td>
 			    </tr>
 			 <% end %>
 		 <% end %>
-		<% end %>
-
+	<% end %>
 	</table>
+
 	<% else %>
 
-	<div class="style_alien">
-		<%= image_tag("alien.png", :alt => "rss feed") %>
-	</div>
+		<div class="style_alien">
+			<%= image_tag("alien.png", :alt => "rss feed") %>
+		</div>
 
-	<div class="homepage_speechbubble">
-		<%= image_tag("homepage-speech-bubble.png", :alt => "rss feed") %>
-	</div>
-	<div class="cilantro">
-		<%= image_tag("cilantro.png", :alt => "rss feed") %>
-		<%= link_to image_tag("cilantro.png"), "https://giphy.com/gifs/spam-xdnytp8742kg0/fullscreen" %>
-	</div>
+		<div class="homepage_speechbubble">
+			<%= image_tag("homepage-speech-bubble.png", :alt => "rss feed") %>
+		</div>
+
+		<div class="cilantro">
+			<%= image_tag("cilantro.png", :alt => "rss feed") %>
+			<%= link_to image_tag("cilantro.png"), "https://giphy.com/gifs/spam-xdnytp8742kg0/fullscreen" %>
+		</div>
+
 	<% end %>
