@@ -119,6 +119,13 @@ h1 {
   font-size: 700;
 }
 
+h1.student_info {
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+  font-size: 700;
+}
+
 /* sections > edit.html.erb */
 h1.edit_section_info {
   text-align: center;
@@ -427,12 +434,15 @@ div.form-inputs {
   font-weight: 300;
 }
 
+div.student_photo {
+  position: absolute;
+  left: 320px;
+}
+
 div.student_info {
-  text-align:center;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  color: black;
-  left: 70%;
+  position: absolute;
+  right: 220px;
+  width: 500px;
 }
 
 div.style_alien_quiz img{
