@@ -30,10 +30,14 @@
 	</div>
 </nav>
 
-<div class="student_info">
-  <%= image_tag @student.student_img.url(:student_show) %>
+<div class="student_photo">
   <br>
-  <h1><%= @student.firstName %>
+  <%= image_tag @student.student_img.url(:student_show) %>
+</div>
+
+<div class="student_info">
+  <br>
+  <h1 class = student_info><%= @student.firstName %>
   <%= @student.lastname %> </h1>
 	<div class="edit_icon">
 		<%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path %>
