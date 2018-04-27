@@ -50,6 +50,18 @@ body{
   font-family: 'Work Sans', sans-serif;
 }
 
+@media only screen
+and (min-width : 320px)
+and (max-width : 414px) {
+  .navbar-default {
+  	background-color:transparent !important;
+  	border-color:transparent;
+  	background-image:none;
+  	box-shadow:none;
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
 /* Classroom Dashboard */
 .navbar-header {
     a {
@@ -76,7 +88,7 @@ and (max-width : 414px) {
     /* S.P.A.M. & Sections */
     color: black !important;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 5px;
     display: inline-block;
     float: none;
     text-align: center;
@@ -387,6 +399,18 @@ div.cilantro img{
   position: absolute;
 }
 
+    @media only screen
+    and (min-width : 320px)
+    and (max-width : 414px) {
+      div.cilantro img{
+        width: 10px;
+        height: auto;
+        top: 0%;
+        left: 3%;
+        position: absolute;
+      }
+    }
+
 /* Error message (permissions) */
 div.error {
   text-align: left;
@@ -439,7 +463,7 @@ div.student_photo {
   left: 320px;
 }
 
-div.student_info {
+div.student_information {
   position: absolute;
   right: 220px;
   width: 500px;

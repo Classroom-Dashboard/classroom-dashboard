@@ -35,9 +35,9 @@
   <%= image_tag @student.student_img.url(:student_show) %>
 </div>
 
-<div class="student_info">
+<div class="student_information">
   <br>
-  <h1 class = student_info><%= @student.firstName %>
+  <h1 class="student_info"><%= @student.firstName %>
   <%= @student.lastname %> </h1>
 	<div class="edit_icon">
 		<%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_section_student_path %>
