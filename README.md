@@ -10,10 +10,9 @@ This tool takes advantage of the technology that is often brought into lectures:
 ### Prerequisites
 
 TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
-Rails 5
 
-## Image Processor
-
+#### Rails
+#### Image Processor
 
 
 ### Gems
@@ -50,7 +49,7 @@ Create an account by inputting an email and creating a password with 6 or more c
 
 #### Login
 
-Access you personal hom
+Access personal homepage by inputting email and password.
 
 #### Add Section
 
@@ -80,6 +79,8 @@ Generates random student without name with the intent to learn student's name. P
 
 TODO: Describe any known issues, bugs, odd behaviors or code smells. 
 Provide steps to reproduce the problem / name a file or a function where the problem lives.
+
+When accessing this software through different mediums, such as a phone, tablet, minimized desktop browser, the layout and images will not scale to the smaller screen. 
 
 ## Contributing
 
