@@ -13,6 +13,7 @@
   <%= f.input :pronouns, label: "Pronouns"%>
   <%= f.input :school, label: "School", as: :select, collection: ['HMC', 'SCR', 'CMC ', 'POM', 'PZ']%>
   <%= f.input :info, label: "Additional Info" %>
+  <br>
   <%= f.file_field :student_img, label: "Upload Image", multiple: true, name: "student[student_img]" %>
   <br>
   <%= f.submit %>
