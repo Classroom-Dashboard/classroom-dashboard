@@ -12,36 +12,67 @@ This tool takes advantage of the technology that is often brought into lectures:
 TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
 Rails 5
 
+## Image Processor
+
+
+
 ### Gems
-Include the gem in your Gemfile:
-```
-gem 'paperclip', '~> 6.0'
-```
-```
-gem 'image_magick', '~> 0.1.9'
-```
-```
-gem 'simple_form', '~> 3.5', '>= 3.5.1'
-```
-```
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-```
 
-
-
-Install: gem install paperclip gem install image_magick
-bundle install
 TODO: List which gems you added to the project, and the purpose each gem serves in your app.
+
+#### Paperclip
+Paperclips allows for easy single file upload for student images.
+
+#### SimpleForm
+
+#### Bootstrap-sass
+
+railties
+
+jquery-rails
+
+jquery-fileupload-rails
 
 ## Installation
 
 TODO: Describe the installation process (making sure you mention `bundle install`).
-Instructions need to be such that a user can just copy/paste the commands to get things set up and running. 
+Instructions need to be such that a user can just copy/paste the commands to get things set up and running.
 
+Include the gems in your Gemfile:
+
+```
+gem 'paperclip', '~> 6.0'
+```
+
+
+```
+gem 'simple_form', '~> 3.5', '>= 3.5.1'
+```
+
+```
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+```
+
+```
+gem 'railties'
+```
+
+```
+gem 'jquery-rails'
+```
+
+```
+gem 'jquery-fileupload-rails'
+```
+ 
 ## Functionality
 
 TODO: Write usage instructions. Structuring it as a walkthrough can help structure this section,
 and showcase your features.
+
+### Sign Up
+
+### Login
 
 ### Add Section
 
@@ -62,6 +93,10 @@ From the Student List page, click on a student to update or delete.
 #### Random Student
 
 Generates random student for cold-calling purposes. The generated student links to student's personal page. 
+
+#### Memory Game
+
+Generates random student without name with the intent to learn student's name. Pressing the spacebar reveals student name.
 
 ## Known Problems
 
