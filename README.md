@@ -61,19 +61,19 @@ Display all students within a class, each as a link to a personal student page c
 
 ##### Add Student
 
-Add a new student with image, name, pronoun, school, and other parameters. 
+Add a new student with image, name, pronoun, school, and other parameters. To parse student name from image file, format as "firstname_lastname.jpg" (or png, JPEG, etc). If student is given no image, a default image will be given to the student. 
 
 ##### Update / Delete Student
 
-From the Student List page, click on a student to update or delete. 
+From the Student List page, click on the pencil to the right of a student's name to update or delete. 
 
-#### Random Student
+#### Flashcards
 
-Generates random student for cold-calling purposes. The generated student links to student's personal page. 
+Selects a random student for cold-calling purposes, displaying that student's image and name. This page does not create a link to a student's personal page, as this page is intended to be projected in front of the class. The right-arrow key displays the next student. No student will be selected twice until all students have been displayed. 
 
 #### Memory Game
 
-Generates random student without name with the intent to learn student's name. Pressing the spacebar reveals student name.
+Selects a random student and displays that student's image. The student's name is revealed after a spacebar press.The right arrow key displays a new student. No student will be selected twice until all students have been displayed. 
 
 ## Known Problems
 
@@ -81,6 +81,8 @@ TODO: Describe any known issues, bugs, odd behaviors or code smells.
 Provide steps to reproduce the problem / name a file or a function where the problem lives.
 
 When accessing this software through different mediums, such as a phone, tablet, minimized desktop browser, the layout and images will not scale to the smaller screen. 
+
+On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
 
 ## Contributing
 
