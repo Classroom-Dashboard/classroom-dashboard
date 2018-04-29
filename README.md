@@ -27,56 +27,34 @@ Paperclips allows for easy single file upload for student images.
 
 #### Bootstrap-sass
 
-railties
-
-jquery-rails
-
-jquery-fileupload-rails
 
 ## Installation
 
 TODO: Describe the installation process (making sure you mention `bundle install`).
 Instructions need to be such that a user can just copy/paste the commands to get things set up and running.
 
-Include the gems in your Gemfile:
 
+On the command line, run:
 ```
-gem 'paperclip', '~> 6.0'
-```
-
-
-```
-gem 'simple_form', '~> 3.5', '>= 3.5.1'
+bundle install
 ```
 
-```
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-```
-
-```
-gem 'railties'
-```
-
-```
-gem 'jquery-rails'
-```
-
-```
-gem 'jquery-fileupload-rails'
-```
- 
 ## Functionality
 
 TODO: Write usage instructions. Structuring it as a walkthrough can help structure this section,
 and showcase your features.
 
-### Sign Up
+#### Sign Up
 
-### Login
+Create an account by inputting an email and creating a password with 6 or more characters.
 
-### Add Section
+#### Login
 
-  Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters. 
+Access you personal hom
+
+#### Add Section
+
+Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters. 
 
 #### Student List
 
