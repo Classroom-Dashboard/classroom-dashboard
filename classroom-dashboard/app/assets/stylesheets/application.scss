@@ -11,7 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require dropzone/dropzone
  *= require_self
 
  */
@@ -26,7 +25,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300,400,500');
-@import "compass";
+
 
 body{
     background:white;
