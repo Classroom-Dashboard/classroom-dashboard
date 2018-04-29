@@ -10,9 +10,18 @@ This tool takes advantage of the technology that is often brought into lectures:
 ### Prerequisites
 
 TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
+Rails 5
 
 ### Gems
+Include the gem in your Gemfile:
+```
+gem 'paperclip', '~> 6.0'
+```
 
+gem 'image_magick', '~> 0.1.9'
+
+Install: gem install paperclip gem install image_magick
+bundle install
 TODO: List which gems you added to the project, and the purpose each gem serves in your app.
 
 ## Installation
