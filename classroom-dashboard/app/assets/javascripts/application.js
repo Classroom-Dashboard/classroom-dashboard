@@ -15,7 +15,6 @@
 //=require jquery_ujs
 //=require jquery-fileupload/basic
 //=require bootstrap-sprockets
-//=require dropzone
 //=require_tree .
 
 

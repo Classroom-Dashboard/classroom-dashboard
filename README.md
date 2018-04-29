@@ -17,8 +17,17 @@ Include the gem in your Gemfile:
 ```
 gem 'paperclip', '~> 6.0'
 ```
-
+```
 gem 'image_magick', '~> 0.1.9'
+```
+```
+gem 'simple_form', '~> 3.5', '>= 3.5.1'
+```
+```
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+```
+
+
 
 Install: gem install paperclip gem install image_magick
 bundle install
