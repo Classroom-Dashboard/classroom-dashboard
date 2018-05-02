@@ -19,8 +19,6 @@ Paperclip, a ruby gem utilized by Classrom Dashboard, must have access to ImageM
 
 ### Gems
 
-TODO: List which gems you added to the project, and the purpose each gem serves in your app.
-
 #### Paperclip
 Paperclips allows for easy single file upload for student images.
 
