@@ -45,7 +45,13 @@ git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
 
 On the command line, run:
 ```
+cd classroom-dashboard
 bundle install
+rails db:migrate
+```
+To access the site, run
+```
+rails server
 ```
 
 ## Functionality
