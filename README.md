@@ -9,8 +9,6 @@ S.P.A.M. is a tool that facilitates student engagement during large lectures by 
 
 ### Prerequisites
 
-TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
-
 #### Rails
 
 Classroom Dashboard requires Ruby version >= 2.4 and Rails version >= 5.1.
@@ -32,9 +30,6 @@ Paperclips allows for easy single file upload for student images.
 
 
 ## Installation
-
-TODO: Describe the installation process (making sure you mention `bundle install`).
-Instructions need to be such that a user can just copy/paste the commands to get things set up and running.
 
 Under **Clone or Download**, copy the repository URL. 
 Open up the terminal and change the current working directory to the location where you want the cloned directory to be made.
@@ -86,9 +81,6 @@ Selects a random student for cold-calling purposes, displaying that student's im
 Selects a random student and displays that student's image. The student's name is revealed after a spacebar press.The right arrow key displays a new student. No student will be selected twice until all students have been displayed. 
 
 ## Known Problems
-
-TODO: Describe any known issues, bugs, odd behaviors or code smells. 
-Provide steps to reproduce the problem / name a file or a function where the problem lives.
 
 #### Bootstrap Complications
 
