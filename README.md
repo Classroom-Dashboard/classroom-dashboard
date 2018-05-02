@@ -9,8 +9,6 @@ S.P.A.M. is a tool that facilitates student engagement during large lectures by 
 
 ### Prerequisites
 
-TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
-
 #### Rails
 
 Classroom Dashboard requires Ruby version >= 2.4 and Rails version >= 5.1.
@@ -37,9 +35,6 @@ S.P.A.M. uses Devise for login capabilities.
 
 
 ## Installation
-
-TODO: Describe the installation process (making sure you mention `bundle install`).
-Instructions need to be such that a user can just copy/paste the commands to get things set up and running.
 
 Under **Clone or Download**, copy the repository URL. 
 Open up the terminal and change the current working directory to the location where you want the cloned directory to be made.
@@ -92,16 +87,13 @@ Selects a random student and displays that student's image. The student's name i
 
 ## Known Problems
 
-TODO: Describe any known issues, bugs, odd behaviors or code smells. 
-Provide steps to reproduce the problem / name a file or a function where the problem lives.
-
 #### Bootstrap Complications
 
 When accessing this software through different mediums, such as a phone, tablet, minimized desktop browser, the layout and images will not scale to the smaller screen. 
 
 #### Restricted Amount of Students
 
-On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
+On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing only handles these cases, and will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
 
 ## Contributing
 
