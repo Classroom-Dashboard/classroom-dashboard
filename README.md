@@ -42,10 +42,16 @@ Run:
 ```
 git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
 ```
-
-On the command line, run:
+To navigate to the cloned directory, in the command line run:
+``` 
+cd classroom-dashboard
+```
+To navigate to the rails app directory, in the command line run:
 ```
 cd classroom-dashboard
+```
+To prepare to run the server, in the command line run:
+```
 bundle install
 rails db:migrate
 ```
