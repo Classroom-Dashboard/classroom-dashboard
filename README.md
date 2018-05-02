@@ -28,10 +28,10 @@ Paperclips allows for easy single file upload for student images.
 The SimpleForm gem is used for creating the forms that the user fills out when adding a Section or a Student.
 
 #### Bootstrap-sass
-This is a a popular, open-source framework that enhanced the front-end work in our website.
+
 
 #### Devise
-Devise provides a flexible authentication solution that allows users to login.
+S.P.A.M. uses Devise for login capabilities.
 
 
 ## Installation
@@ -42,16 +42,10 @@ Run:
 ```
 git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
 ```
-To navigate to the cloned directory, in the command line run:
-``` 
-cd classroom-dashboard
-```
-To navigate to the rails app directory, in the command line run:
+
+On the command line, run:
 ```
 cd classroom-dashboard
-```
-To prepare to run the server, in the command line run:
-```
 bundle install
 rails db:migrate
 ```
@@ -59,7 +53,6 @@ To access the site, run
 ```
 rails server
 ```
-and go to http://0.0.0.0:3000/ in a browser window.
 
 ## Functionality
 
@@ -70,21 +63,37 @@ and showcase your features.
 
 Create an account by inputting an email and creating a password with 6 or more characters.
 
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/signup_screenshot.png" width="500"/>
+</p>
+
 #### Login
 
 Access personal homepage by inputting email and password.
 
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/login_screenshot.png" width="500"/>
+</p>
+
 #### Add Section
 
-Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters. 
+Add a new section with name (ex: 'CS5') and semester (ex: 'S2018') parameters.
+
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/newsection_screenshot.png" width="500"/>
+</p>
 
 #### Student List
 
-Display all students within a class, each as a link to a personal student page containing all information. 
+Display all students within a class, each as a link to a personal student page containing all information.
+
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/listofstudents_screenshot.png" width="500"/>
+</p>
 
 ##### Add Student
 
-Add a new student with image, name, pronoun, school, and other parameters. To parse student name from image file, format as "firstname_lastname.jpg" (or png, JPEG, etc). If student is given no image, a default image will be given to the student. 
+Add a new student with image, name, pronoun, school, and other parameters. To parse student name from image file, format as "firstname_lastname.jpg" (or png, JPEG, etc). If student is given no image, a default image will be given to the student.
 
 ##### Update / Delete Student
 
@@ -92,11 +101,19 @@ From the Student List page, click on the pencil to the right of a student's name
 
 #### Flashcards
 
-Selects a random student for cold-calling purposes, displaying that student's image and name. This page does not create a link to a student's personal page, as this page is intended to be projected in front of the class. The right-arrow key displays the next student. No student will be selected twice until all students have been displayed. 
+Selects a random student for cold-calling purposes, displaying that student's image and name. This page does not create a link to a student's personal page, as this page is intended to be projected in front of the class. The right-arrow key displays the next student. No student will be selected twice until all students have been displayed.
+
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/flashcards_screenshot.png" width="500"/>
+</p>
 
 #### Memory Game
 
-Selects a random student and displays that student's image. The student's name is revealed after a spacebar press.The right arrow key displays a new student. No student will be selected twice until all students have been displayed. 
+Selects a random student and displays that student's image. The student's name is revealed after a spacebar press.The right arrow key displays a new student. No student will be selected twice until all students have been displayed.
+
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/memorygame_screenshot.png" width="500"/>
+</p>
 
 ## Known Problems
 
@@ -106,7 +123,7 @@ When accessing this software through different mediums, such as a phone, tablet,
 
 #### Restricted Amount of Students
 
-On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases were written to handle students with single-digit, two-digit, and three-digit IDs. Currently, this image accessing only handles these cases, and will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. Addressing this problem requires an understanding of how an image's URL changes with a four-digit student ID. 
+On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing only handles these cases, and will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
 
 ## Contributing
 
