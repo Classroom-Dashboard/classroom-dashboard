@@ -15,7 +15,7 @@ Classroom Dashboard requires Ruby version >= 2.4 and Rails version >= 5.1.
 
 #### ImageMagick
 
-Paperclip, a ruby gem utilized by Classrom Dashboard, must have access to ImageMagick. To install ImageMagick, go to the [Paperclip Documentation Page](https://github.com/thoughtbot/paperclip). Follow the steps within the [Requirements](https://github.com/thoughtbot/paperclip#requirements) section, under [Image Processor](https://github.com/thoughtbot/paperclip#image-processor). 
+Paperclip, a ruby gem utilized by S.P.A.M., must have access to ImageMagick. To install ImageMagick, go to the [Paperclip Documentation Page](https://github.com/thoughtbot/paperclip). Follow the steps within the [Requirements](https://github.com/thoughtbot/paperclip#requirements) section, under [Image Processor](https://github.com/thoughtbot/paperclip#image-processor). 
 
 ### Gems
 
@@ -53,9 +53,6 @@ rails server
 ```
 
 ## Functionality
-
-TODO: Write usage instructions. Structuring it as a walkthrough can help structure this section,
-and showcase your features.
 
 #### Sign Up
 
