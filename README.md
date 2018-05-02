@@ -31,7 +31,7 @@ The SimpleForm gem is used for creating the forms that the user fills out when a
 
 
 #### Devise
-S.P.A.M. uses Devise for login capabilities.
+Devise provides a flexible authentication solution that allows users to login.
 
 
 ## Installation
