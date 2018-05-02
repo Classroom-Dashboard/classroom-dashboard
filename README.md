@@ -96,7 +96,7 @@ When accessing this software through different mediums, such as a phone, tablet,
 
 #### Amount of Student Restrictions
 
-On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
+On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing only handles these cases, and will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
 
 ## Contributing
 
