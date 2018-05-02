@@ -12,8 +12,12 @@ This tool takes advantage of the technology that is often brought into lectures:
 TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
 
 #### Rails
-#### Image Processor
 
+Classroom Dashboard requires Ruby version >= 2.4 and Rails version >= 5.1.
+
+#### ImageMagick
+
+Paperclip, a ruby gem utilized by Classrom Dashboard, must have access to ImageMagick. To install ImageMagick, go to the [Paperclip Documentation Page](https://github.com/thoughtbot/paperclip). Follow the steps within the [Requirements](https://github.com/thoughtbot/paperclip#requirements) section, under [Image Processor](https://github.com/thoughtbot/paperclip#image-processor). 
 
 ### Gems
 
@@ -32,6 +36,12 @@ Paperclips allows for easy single file upload for student images.
 TODO: Describe the installation process (making sure you mention `bundle install`).
 Instructions need to be such that a user can just copy/paste the commands to get things set up and running.
 
+Under **Clone or Download**, copy the repository URL. 
+Open up the terminal and change the current working directory to the location where you want the cloned directory to be made.
+run:
+```
+$ git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
+```
 
 On the command line, run:
 ```
@@ -80,7 +90,11 @@ Selects a random student and displays that student's image. The student's name i
 TODO: Describe any known issues, bugs, odd behaviors or code smells. 
 Provide steps to reproduce the problem / name a file or a function where the problem lives.
 
+#### Bootstrap Complications
+
 When accessing this software through different mediums, such as a phone, tablet, minimized desktop browser, the layout and images will not scale to the smaller screen. 
+
+#### Amount of Student Restrictions
 
 On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
 
