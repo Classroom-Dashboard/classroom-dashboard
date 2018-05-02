@@ -59,6 +59,7 @@ To access the site, run
 ```
 rails server
 ```
+and go to http://0.0.0.0:3000/ in a browser window.
 
 ## Functionality
 
