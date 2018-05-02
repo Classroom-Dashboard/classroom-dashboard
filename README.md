@@ -27,8 +27,13 @@ TODO: List which gems you added to the project, and the purpose each gem serves 
 Paperclips allows for easy single file upload for student images.
 
 #### SimpleForm
+The SimpleForm gem is used for creating the forms that the user fills out when adding a Section or a Student.
 
 #### Bootstrap-sass
+
+
+#### Devise
+S.P.A.M. uses Devise for login capabilities.
 
 
 ## Installation
@@ -38,7 +43,7 @@ Instructions need to be such that a user can just copy/paste the commands to get
 
 Under **Clone or Download**, copy the repository URL. 
 Open up the terminal and change the current working directory to the location where you want the cloned directory to be made.
-run:
+Run:
 ```
 git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
 ```
@@ -94,7 +99,7 @@ Provide steps to reproduce the problem / name a file or a function where the pro
 
 When accessing this software through different mediums, such as a phone, tablet, minimized desktop browser, the layout and images will not scale to the smaller screen. 
 
-#### Amount of Student Restrictions
+#### Restricted Amount of Students
 
 On the Flashcards and Memory Game pages, the student's images are accessed through that image's URL (in the JS script within flashcards.html.erb and quiz.html.erb). Special cases had to be written for students with single-digit, two-digit, and three-digit ID's. Currently, this image accessing will break for the 1000th student created on the site, as there is no case for students with IDs greater than three digits. 
 
