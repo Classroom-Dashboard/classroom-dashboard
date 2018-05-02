@@ -40,7 +40,7 @@ Under **Clone or Download**, copy the repository URL.
 Open up the terminal and change the current working directory to the location where you want the cloned directory to be made.
 run:
 ```
-$ git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
+git clone https://github.com/Classroom-Dashboard/classroom-dashboard.git
 ```
 
 On the command line, run:
