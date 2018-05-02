@@ -12,8 +12,10 @@ This tool takes advantage of the technology that is often brought into lectures:
 TODO: List what a user needs to have installed before running the installation instructions below (e.g., git, which versions of Ruby/Rails)
 
 #### Rails
-#### Image Processor
+#### ImageMagick
 
+To install ImageMagick, go to the [Paperclip Documentation](https://github.com/thoughtbot/paperclip).
+In Requirements, under Image Processor, follow the steps to install ImageMagick.
 
 ### Gems
 
