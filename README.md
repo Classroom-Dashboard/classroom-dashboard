@@ -1,9 +1,9 @@
 
-# Classroom Dashboard
+# Students Participating At Mudd (S.P.A.M.)
 
-Classroom Dashboard is a tool to facilitate student engagement during class and lecture. A student and a professor use the tool in different ways to foster participation, familiarity between student-professor relationships, and help build student-student relationships as well. 
+While Harvey Mudd CS professors often use technology to present their lecture content, in-class interactions (such as randomly calling students) remain offline and inefficient.
 
-This tool takes advantage of the technology that is often brought into lectures: smart phones and laptops. The functionality includes features such as equity cards to promote student participation and quizzes to promote engagement and attendance. Classroom Dashboard bridges the gap between the surrounding abundance of technology and the manner in which the course material is absorbed by organizing these interactions.
+S.P.A.M. is a tool that facilitates student engagement during large lectures by implementing random cold-calling for in-class questions. Outside of class, professors use S.P.A.M. to make notes of student information and test their knowledge of student names.
 
 ## Architecture
 
