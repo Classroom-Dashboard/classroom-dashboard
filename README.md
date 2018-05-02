@@ -95,9 +95,21 @@ Display all students within a class, each as a link to a personal student page c
 
 Add a new student with image, name, pronoun, school, and other parameters. To parse student name from image file, format as "firstname_lastname.jpg" (or png, JPEG, etc). If student is given no image, a default image will be given to the student.
 
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/add_student.png" width="500"/>
+</p>
+
 ##### Update / Delete Student
 
 From the Student List page, click on the pencil to the right of a student's name to update or delete. 
+
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/edit_student.png" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Classroom-Dashboard/classroom-dashboard/blob/master/classroom-dashboard/public/images/delete_student.png" width="500"/>
+</p>
 
 #### Flashcards
 
